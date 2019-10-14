@@ -119,37 +119,31 @@ class CallbackEvaluator(core.Callback):
             message = torch.index_select(original_message, 0, permutation)
             output = game.receiver(message, receiver_input)
 
-            if not self.is_gs: 
-                output = output[0]
+            if not self.is_gs: output = output[0]
 
             if not self.var_length:
-                _, rest = self.loss(None, None, None, output, labels)
+                l, rest = self.loss(None, None, None, output, labels)
                 mean_acc += rest['acc'].mean().item()
                 scaler += 1
 
                 original_messages.extend(original_message)
-            elif not self.is_gs:
-                lengths = core.find_lengths(message)
-
-                for i in range(lengths.size(0)):
-                    l = lengths[i]
-                    original_messages.append(message[i, :l])
-
-                _, rest = self.loss(None, None, None, output, labels)
-                mean_acc += rest['acc'].mean().item()
-                scaler += 1
             else:
-                message = message.argmax(dim=-1)
-                lengths = core.find_lengths(message)
-
+                lengths = _find_lengths(message.argmax(dim=-1))
                 for i in range(lengths.size(0)):
-                    l = lengths[i]
-                    original_messages.append(message[i, :l])
+                    if lengths[i] >= output.size(1):
+                        ind = -1
+                    else:
+                        ind = lengths[i]
+                    _, _rest = self.loss(None, None, None, output[i, ind, :].unsqueeze(0), labels[i].unsqueeze(0))
 
-                    _, rest = self.loss(None, None, None, output[i:i+1, l-1], labels[i:i+1])
-                    mean_acc += rest['acc'].item()
-                    scaler += 1
+                    mean_acc += _rest['acc'].sum().item()
+                    scaler += _rest['acc'].size(0)
 
+                    message = original_message.argmax(dim=-1)
+                    lengths = _find_lengths(message)
+                    for i in range(lengths.size(0)):
+                        l = lengths[i]
+                        original_messages.append(message[i, :l])
 
             corresponding_labels.extend(labels)
 
@@ -189,19 +183,23 @@ class CallbackEvaluator(core.Callback):
             output = game.receiver(message, receiver_input)
 
             if not self.is_gs: output = output[0]
-            if self.is_gs and self.var_length:
-                message = message.argmax(dim=-1)
-                lengths = core.find_lengths(message)
 
-                for i in range(lengths.size(0)):
-                    l = lengths[i]
-                    _, rest = self.loss(None, None, None, output[i:i+1, l-1], labels[i:i+1])
-                    mean_acc += rest['acc'].item()
-                    scaler += 1
-            else:
-                _, rest = self.loss(None, None, None, output, labels)
+            if not self.var_length:
+                l, rest = self.loss(None, None, None, output, labels)
                 mean_acc += rest['acc'].mean().item()
                 scaler += 1.0
+            else:
+                lengths = _find_lengths(message.argmax(dim=-1))
+                mean_acc = 0
+                for i in range(lengths.size(0)):
+                    if lengths[i] >= output.size(1):
+                        ind = -1
+                    else:
+                        ind = lengths[i]
+                    _, _rest = self.loss(None, None, None, output[i, ind, :].unsqueeze(0), labels[i].unsqueeze(0))
+
+                    mean_acc += _rest['acc'].mean().item()
+                    scaler += _rest['acc'].size(0)
 
         mean_acc /= scaler
         s = dict(
@@ -238,7 +236,7 @@ class CallbackEvaluator(core.Callback):
         message_mapping = {}
 
         for message, label in zip(messages, labels):
-            message = _hashable_tensor(message)
+            message = message.item()
             label = _hashable_tensor(label)
 
             if not message in message_mapping:

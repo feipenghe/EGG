@@ -82,14 +82,28 @@ def get_game(opt):
 if __name__ == '__main__':
     opts = parse_arguments()
 
-    data_folder = os.path.join(opts.root, "train/")
-    dataset = ImageNetFeat(root=data_folder)
 
-    train_loader = ImagenetLoader(dataset, batch_size=opts.batch_size, shuffle=True, opt=opts,
-                                  batches_per_epoch=opts.batches_per_epoch, seed=None)
-    validation_loader = ImagenetLoader(dataset, opt=opts, batch_size=opts.batch_size,
-                                       batches_per_epoch=opts.batches_per_epoch,
-                                       seed=7)
+    # data_folder = os.path.join(opts.root, "train/")
+    # dataset = ImageNetFeat(root=data_folder)
+
+    # train_loader = ImagenetLoader(dataset, batch_size=opts.batch_size, shuffle=True, opt=opts,
+    #                               batches_per_epoch=opts.batches_per_epoch, seed=None)
+    # validation_loader = ImagenetLoader(dataset, opt=opts, batch_size=opts.batch_size,
+    #                                    batches_per_epoch=opts.batches_per_epoch,
+    #                                    seed=7)
+    import context
+    import building_numerical_dataset
+
+    c1 = context.Context(3, 320000, 320000)
+    c2 = context.Context(3, 320000, 320000)
+
+    train_dataset = building_numerical_dataset.SignalGameDataset(c1)
+    train_loader = train_dataset.getloader(batch_size = opts.batch_size, shuffle = True)
+
+    val_dataset = building_numerical_dataset.SignalGameDataset(c2)
+    validation_loader = val_dataset.getloader(batch_size = opts.batch_size, shuffle = True)
+
+
     game = get_game(opts)
     optimizer = core.build_optimizer(game.parameters())
     callback = None
@@ -101,6 +115,6 @@ if __name__ == '__main__':
     trainer = core.Trainer(game=game, optimizer=optimizer, train_data=train_loader,
                            validation_data=validation_loader, callbacks=callbacks)
 
-    trainer.train(n_epochs=opts.n_epochs)
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
 
     core.close()
