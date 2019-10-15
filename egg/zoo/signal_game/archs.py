@@ -54,10 +54,13 @@ class InformedSender(nn.Module):
         # embed each image (left or right)
         embs = []
         for i in range(self.game_size):
-            h = x[i]
+            print(self.game_size)
             if len(h.size()) == 3:
                 h = h.squeeze(dim=-1)
-            h_i = self.lin1(h)
+            try:
+                h_i = self.lin1(h)
+            except RunTimeError:
+                print(h)
             # h_i are batch_size x embedding_size
             h_i = h_i.unsqueeze(dim=1)
             h_i = h_i.unsqueeze(dim=1)

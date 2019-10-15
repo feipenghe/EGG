@@ -3,6 +3,7 @@
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
 
+import egg
 import os
 import argparse
 import torch.nn.functional as F
@@ -82,26 +83,29 @@ def get_game(opt):
 if __name__ == '__main__':
     opts = parse_arguments()
 
+    opts.root = "/Users/pengfeihe/.Trash/EGG/egg/zoo/signal_game/data/"
+    data_folder = os.path.join(opts.root, "train/")
+    dataset = ImageNetFeat(root=data_folder)
 
-    # data_folder = os.path.join(opts.root, "train/")
-    # dataset = ImageNetFeat(root=data_folder)
+    train_loader = ImagenetLoader(dataset, batch_size=opts.batch_size, shuffle=True, opt=opts,
+                                   batches_per_epoch=opts.batches_per_epoch, seed=None)
+    validation_loader = ImagenetLoader(dataset, opt=opts, batch_size=opts.batch_size,
+                                        batches_per_epoch=opts.batches_per_epoch,
+                                        seed=7)
 
-    # train_loader = ImagenetLoader(dataset, batch_size=opts.batch_size, shuffle=True, opt=opts,
-    #                               batches_per_epoch=opts.batches_per_epoch, seed=None)
-    # validation_loader = ImagenetLoader(dataset, opt=opts, batch_size=opts.batch_size,
-    #                                    batches_per_epoch=opts.batches_per_epoch,
-    #                                    seed=7)
-    import context
-    import building_numerical_dataset
 
-    c1 = context.Context(3, 320000, 320000)
-    c2 = context.Context(3, 320000, 320000)
 
-    train_dataset = building_numerical_dataset.SignalGameDataset(c1)
-    train_loader = train_dataset.getloader(batch_size = opts.batch_size, shuffle = True)
-
-    val_dataset = building_numerical_dataset.SignalGameDataset(c2)
-    validation_loader = val_dataset.getloader(batch_size = opts.batch_size, shuffle = True)
+#    import context
+#    import building_numerical_dataset
+#
+#    c1 = context.Context(3, 320000, 320000)
+#    c2 = context.Context(3, 320000, 320000)
+#
+#    train_dataset = building_numerical_dataset.SignalGameDataset(c1)
+#    train_loader = train_dataset.getloader(batch_size = opts.batch_size, shuffle = True)
+#
+#    val_dataset = building_numerical_dataset.SignalGameDataset(c2)
+#    validation_loader = val_dataset.getloader(batch_size = opts.batch_size, shuffle = True)
 
 
     game = get_game(opts)
