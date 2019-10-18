@@ -110,6 +110,7 @@ class SymbolGameReinforce(nn.Module):
 
     def forward(self, sender_input, labels, receiver_input=None):
         message, sender_log_prob, sender_entropy = self.sender(sender_input)
+        print(sender_input)
         receiver_output, receiver_log_prob, receiver_entropy = self.receiver(message, receiver_input)
 
         loss, rest_info = self.loss(sender_input, message, receiver_input, receiver_output, labels)
