@@ -1,0 +1,1 @@
+python3 -m egg.zoo.signal_game.train --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data

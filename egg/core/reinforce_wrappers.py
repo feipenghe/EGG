@@ -109,6 +109,7 @@ class SymbolGameReinforce(nn.Module):
         self.n_points = 0.0
 
     def forward(self, sender_input, labels, receiver_input=None):
+        print("wrapper: " + str(sender_input))
         message, sender_log_prob, sender_entropy = self.sender(sender_input)
         print(sender_input)
         receiver_output, receiver_log_prob, receiver_entropy = self.receiver(message, receiver_input)

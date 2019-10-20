@@ -83,30 +83,60 @@ def get_game(opt):
 if __name__ == '__main__':
     opts = parse_arguments()
 
-    opts.root = "/Users/pengfeihe/.Trash/EGG/egg/zoo/signal_game/data/"
-    data_folder = os.path.join(opts.root, "train/")
-    dataset = ImageNetFeat(root=data_folder)
+    #    opts.root = "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/Processed"
 
-    train_loader = ImagenetLoader(dataset, batch_size=opts.batch_size, shuffle=True, opt=opts,
-                                   batches_per_epoch=opts.batches_per_epoch, seed=None)
-    validation_loader = ImagenetLoader(dataset, opt=opts, batch_size=opts.batch_size,
-                                        batches_per_epoch=opts.batches_per_epoch,
-                                        seed=7)
+    #    data_folder = os.path.join(opts.root, "train/")
+    #    dataset = ImageNetFeat(root=data_folder)
+    #
+    #    train_loader = ImagenetLoader(dataset, batch_size=opts.batch_size, shuffle=True, opt=opts,
+    #                                   batches_per_epoch=opts.batches_per_epoch, seed=None)
+    #    validation_loader = ImagenetLoader(dataset, opt=opts, batch_size=opts.batch_size,
+    #                                        batches_per_epoch=opts.batches_per_epoch,
+    #                                        seed=7)
+
+    import context
+    import building_numerical_dataset
+    import numpy as np
+    #    c1 = context.Context(3, 320000, 320000).view()
+    #    c2 = context.Context(3, 320000, 320000).view()
 
 
+    # with batch generated
+    # d1 = []
+    # d2 = []
+    # for i in range(3): # dataset level
+    #     b = []
+    #     for j in range(2): # batch level
+    #         input = context.Context(3, 3200, 3200).view()
+    #         b.append(input)  # input level
+    #     d1.append(b)
+    #
+    # for i in range(3):
+    #     b = []
+    #     for j in range(1):
+    #         input = context.Context(3, 3200, 3200).view()
+    #         b.append(input)
+    #     d1.append(b)
+    # d1 = np.array(d1)
+    # d2 = np.array(d2)
 
-#    import context
-#    import building_numerical_dataset
-#
-#    c1 = context.Context(3, 320000, 320000)
-#    c2 = context.Context(3, 320000, 320000)
-#
-#    train_dataset = building_numerical_dataset.SignalGameDataset(c1)
-#    train_loader = train_dataset.getloader(batch_size = opts.batch_size, shuffle = True)
-#
-#    val_dataset = building_numerical_dataset.SignalGameDataset(c2)
-#    validation_loader = val_dataset.getloader(batch_size = opts.batch_size, shuffle = True)
+    # without batch generated
+    d1 = []
+    d2 = []
+    for i in range(6):
+        input = context.Context(3, 3200, 3200).view()
+        d1.append(input)  # input level
 
+    for i in range(6):
+        input = context.Context(3, 3200, 3200).view()
+        d2.append(input)  # input level
+
+    opts.batch_size = 2 # for testing purpose
+    train_dataset = building_numerical_dataset.SignalGameDataset(d1)
+    train_loader = train_dataset.getloader(batch_size=opts.batch_size, shuffle=True)
+
+    val_dataset = building_numerical_dataset.SignalGameDataset(d2)
+    validation_loader = val_dataset.getloader(batch_size=opts.batch_size, shuffle=True)
 
     game = get_game(opts)
     optimizer = core.build_optimizer(game.parameters())
