@@ -1,0 +1,178 @@
+Last login: Fri Oct 18 17:37:37 on ttys001
+➜  EGG-master pwd
+/Users/pengfeihe/Documents/Programming Language/Python/Emergent Communication/EGG-master
+➜  EGG-master sh start_signal_game.sh
+/Users/pengfeihe/Documents/Programming Language/Python/data/train/
+<HDF5 file "ours_images_single_sm0.h5" (mode r)>
+^Z
+[1]  + 33299 suspended  sh start_signal_game.sh
+➜  EGG-master sh start_signal_game.sh
+[[305166 131537 231897]
+ [  7967  40687 213550]
+ [151227  85531  69296]
+ ...
+ [215796 260922 261616]
+ [186771  90097 169932]
+ [ 63569  84962  75693]]
+320000
+[[286946 158396 149886]
+ [ 49569 294114 138632]
+ [  5621 246154 276986]
+ ...
+ [107748  90979 142942]
+ [307186 272763  42332]
+ [121969 308339 319510]]
+320000
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Emergent Communication/EGG-master/egg/zoo/signal_game/train.py", line 120, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Emergent Communication/EGG-master/egg/core/trainers.py", line 152, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Emergent Communication/EGG-master/egg/core/trainers.py", line 132, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+TypeError: forward() takes from 3 to 4 positional arguments but 33 were given
+➜  EGG-master sh start_signal_game.sh
+[[218089 119267 138676]
+ [ 68693 305751  99355]
+ [  4751  12807 212021]
+ ...
+ [145466 237889  81884]
+ [260898 204367 279519]
+ [ 77213 210720  71038]]
+320000
+[[ 34007  41006 295070]
+ [118230 261833   7024]
+ [ 79086 141777 202160]
+ ...
+ [ 25327 170646 280547]
+ [218443 109425 109297]
+ [109658 135342  63889]]
+320000
+<class 'building_numerical_dataset.SignalGameDataset'>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Emergent Communication/EGG-master/egg/zoo/signal_game/train.py", line 120, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Emergent Communication/EGG-master/egg/core/trainers.py", line 152, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Emergent Communication/EGG-master/egg/core/trainers.py", line 132, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+TypeError: forward() takes from 3 to 4 positional arguments but 33 were given
+➜  EGG-master sh start_signal_game.sh
+[[168837  25644 130883]
+ [294029  63903  87312]
+ [314237 153777 173582]
+ ...
+ [263800 228151 236536]
+ [ 39298 260665 264045]
+ [ 87074 146547 238181]]
+320000
+^Z
+[2]  + 33345 suspended  sh start_signal_game.sh
+➜  EGG-master sh start_signal_game.sh
+[[113741  79017  14473]
+ [115649 263840 282817]
+ [256782  90809 192329]
+ ...
+ [249483 139905  10238]
+ [308155 144658 213822]
+ [152120 137559 279018]]
+320000
+[[319861  58466  84666]
+ [138404 255001  21186]
+ [ 34516 166625 295261]
+ ...
+ [ 68164 122220 166148]
+ [183647  74810 154400]
+ [132614 285848  68706]]
+320000
+<class 'torch.utils.data.dataloader.DataLoader'>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Emergent Communication/EGG-master/egg/zoo/signal_game/train.py", line 120, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Emergent Communication/EGG-master/egg/core/trainers.py", line 152, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Emergent Communication/EGG-master/egg/core/trainers.py", line 132, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+TypeError: forward() takes from 3 to 4 positional arguments but 33 were given
+➜  EGG-master sh start_signal_game.sh
+[[250495  42206 300604]
+ [ 48420 211231 140438]
+ [201791  87997 106911]
+ ...
+ [ 12696 283899 141490]
+ [ 19290  77792 275548]
+ [290951 231174 306373]]
+320000
+[[ 16601 157937 135267]
+ [ 40507  85269  75865]
+ [232926 256990  14583]
+ ...
+ [ 95828  81559  88437]
+ [126907 225836 137658]
+ [213605  29394 182698]]
+320000
+<class 'context.Context'>
+<class 'torch.utils.data.dataloader.DataLoader'>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Emergent Communication/EGG-master/egg/zoo/signal_game/train.py", line 120, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Emergent Communication/EGG-master/egg/core/trainers.py", line 152, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Emergent Communication/EGG-master/egg/core/trainers.py", line 132, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+TypeError: forward() takes from 3 to 4 positional arguments but 33 were given
+➜  EGG-master sh start_signal_game.sh
+/Users/pengfeihe/Documents/Programming Language/Python/data/train/
+<HDF5 file "ours_images_single_sm0.h5" (mode r)>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Emergent Communication/EGG-master/egg/zoo/signal_game/train.py", line 87, in <module>
+    dataset = ImageNetFeat(root=data_folder)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Emergent Communication/EGG-master/egg/zoo/signal_game/features.py", line 120, in __init__
+    labels = pickle.load(f)
+_pickle.UnpicklingError: invalid load key, '\x00'.
+➜  EGG-master sh start_signal_game.sh
+/Users/pengfeihe/Documents/Programming Language/Python/data/train/
+<HDF5 file "ours_images_single_sm0.h5" (mode r)>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Emergent Communication/EGG-master/egg/zoo/signal_game/train.py", line 87, in <module>
+    dataset = ImageNetFeat(root=data_folder)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Emergent Communication/EGG-master/egg/zoo/signal_game/features.py", line 120, in __init__
+    labels = pickle.load(f)
+_pickle.UnpicklingError: invalid load key, '\x00'.
+➜  EGG-master pw                     
+zsh: command not found: pw
+➜  EGG-master pwd
+/Users/pengfeihe/Documents/Programming Language/Python/Emergent Communication/EGG-master
+➜  EGG-master 
