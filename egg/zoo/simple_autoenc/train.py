@@ -14,8 +14,12 @@ from egg.zoo.simple_autoenc.archs import Sender, Receiver
 
 def get_params():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--n_features', type=int, default=10,
+    # parser.add_argument('--n_features', type=int, default=10,
+    #                     help='Dimensionality of the "concept" space (default: 10)')
+    parser.add_argument('--n_properties', type=int, default=10,
                         help='Dimensionality of the "concept" space (default: 10)')
+    parser.add_argument('--n_dim', type=int, default=3,
+                        help='Dimensionality of the "concept" space (default: 10)')n
     parser.add_argument('--batches_per_epoch', type=int, default=1000,
                         help='Number of batches per epoch (default: 1000)')
 
@@ -66,13 +70,19 @@ if __name__ == "__main__":
     opts = get_params()
 
     device = torch.device("cuda" if opts.cuda else "cpu")
-    train_loader = OneHotLoader(n_features=opts.n_features, batch_size=opts.batch_size,
+    # train_loader = OneHotLoader(n_features=opts.n_features, batch_size=opts.batch_size,
+    #                             batches_per_epoch=opts.batches_per_epoch)
+    # test_loader = OneHotLoader(n_features=opts.n_features, batch_size=opts.batch_size,
+    #                             batches_per_epoch=opts.batches_per_epoch, seed=7)
+    n_features = opts.n_dim * opts.n_properties
+    train_loader = OneHotLoader(n_dim = opts.n_dim, n_properties = opts.n_properties, batch_size=opts.batch_size,
                                 batches_per_epoch=opts.batches_per_epoch)
-    test_loader = OneHotLoader(n_features=opts.n_features, batch_size=opts.batch_size,
+    test_loader = OneHotLoader(n_dim = opts.n_dim, n_properties = opts.n_properties, batch_size=opts.batch_size,
                                 batches_per_epoch=opts.batches_per_epoch, seed=7)
-
-    sender = Sender(n_hidden=opts.sender_hidden, n_features=opts.n_features)
-    receiver = Receiver(n_features=opts.n_features, n_hidden=opts.receiver_hidden)
+    sender = Sender(n_hidden=opts.sender_hidden, n_features=n_features)
+    receiver = Receiver(n_features=n_features, n_hidden=opts.receiver_hidden)
+    # sender = Sender(n_hidden=opts.sender_hidden, n_features=opts.n_features)
+    # receiver = Receiver(n_features=opts.n_features, n_hidden=opts.receiver_hidden)
 
     if opts.mode.lower() == 'rf':
         sender = core.RnnSenderReinforce(sender,

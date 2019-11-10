@@ -111,7 +111,7 @@ class ImageNetFeat(data.Dataset):
         # normalise data
         img_norm = torch.norm(data, p=2, dim=1, keepdim=True)
         normed_data = data / img_norm
-
+        print(root)
         objects_file = os.path.join(root,
                                     'ours_images_single_sm0.objects')
         with open(objects_file, "rb") as f:

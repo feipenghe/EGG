@@ -27,13 +27,19 @@ class Context(object):
         	# pick properties from scale(set) of values
             dimension = np.random.choice(scale,
                                          size=self.n_objs, replace=False)
+            
             print(dimension)
+            
+            # put min value in 0, 2, 4 at the current dimension?
+            
             # the index of min properties
             where_min = np.argmin(dimension)
             # min_idx = double the dim
             min_idx = idx * 2
-
-            dimension[[where_min, min_idx]] = dimension[[min_idx, where_min]]
+            dimension[[where_min, min_idx]] = dimension[[min_idx, where_min]] # swap values at the two positions
+            
+            # put max value in 1, 3, 5 at the current dimension? (target place?)
+            
             where_max = np.argmax(dimension)
             max_idx = min_idx + 1
             dimension[[where_max, max_idx]] = dimension[[max_idx, where_max]]

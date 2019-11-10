@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "train.py", line 136, in <module>
+    train_loader = train_dataset.getloader(batch_size=opts.batch_size, shuffle=True)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/building_numerical_dataset.py", line 27, in getloader
+    print(next(iter(data_loader)))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 346, in __next__
+    data = self.dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/_utils/fetch.py", line 44, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/_utils/fetch.py", line 44, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/building_numerical_dataset.py", line 18, in __getitem__
+    noisy = torch.randn(32) + successors
+RuntimeError: expected device cpu and dtype Float but got device cpu and dtype Int
+
+

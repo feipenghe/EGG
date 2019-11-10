@@ -127,9 +127,14 @@ class Trainer:
         mean_rest = {}
         n_batches = 0
         self.game.train()
+        print("\n\n\n\n----------------train")
+        print("train data: " + str(type(self.train_data)) )
         for batch in self.train_data:
             self.optimizer.zero_grad()
             batch = move_to(batch, self.device)
+            print("batch: " + str(type(batch)))
+            # print("batch:  dim" + str(batch.shape)) # batch is a list right now
+            print("batch:  dim" + str(len(batch)))
             optimized_loss, rest = self.game(*batch)
             mean_rest = _add_dicts(mean_rest, rest)
             optimized_loss.backward()

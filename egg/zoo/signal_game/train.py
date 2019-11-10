@@ -8,9 +8,10 @@ import os
 import argparse
 import torch.nn.functional as F
 import egg.core as core
+import egg.zoo.signal_game.sgdata
 from egg.zoo.signal_game.features import ImageNetFeat, ImagenetLoader
 from egg.zoo.signal_game.archs import InformedSender, Receiver
-
+from egg.zoo.signal_game.sgdata import OneHotLoader
 
 def parse_arguments():
     parser = argparse.ArgumentParser()
@@ -83,29 +84,73 @@ def get_game(opt):
 if __name__ == '__main__':
     opts = parse_arguments()
 
-    opts.root = "/Users/pengfeihe/.Trash/EGG/egg/zoo/signal_game/data/"
-    data_folder = os.path.join(opts.root, "train/")
-    dataset = ImageNetFeat(root=data_folder)
+    #    opts.root = "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/Processed"
 
-    train_loader = ImagenetLoader(dataset, batch_size=opts.batch_size, shuffle=True, opt=opts,
-                                   batches_per_epoch=opts.batches_per_epoch, seed=None)
-    validation_loader = ImagenetLoader(dataset, opt=opts, batch_size=opts.batch_size,
-                                        batches_per_epoch=opts.batches_per_epoch,
-                                        seed=7)
+    #    data_folder = os.path.join(opts.root, "train/")
+    #    dataset = ImageNetFeat(root=data_folder)
+    #
+    #    train_loader = ImagenetLoader(dataset, batch_size=opts.batch_size, shuffle=True, opt=opts,
+    #                                   batches_per_epoch=opts.batches_per_epoch, seed=None)
+    #    validation_loader = ImagenetLoader(dataset, opt=opts, batch_size=opts.batch_size,
+    #                                        batches_per_epoch=opts.batches_per_epoch,
+    #                                        seed=7)
+
+    # import context
+    # import building_numerical_dataset
+    # import numpy as np
+    #    c1 = context.Context(3, 320000, 320000).view()¬¬
+    #    c2 = context.Context(3, 320000, 320000).view()
+
+
+    # # with batch generated
+    # d1 = []
+    # d2 = []
+    # for i in range(3):  # dataset level
+    #     b = []
+    #     for j in range(2):  # batch level
+    #         input = context.Context(3, 32, 32).view()
+    #         b.append(input)  # input level
+    #     d1.append(b)
+    #
+    # for i in range(3):
+    #     b = []
+    #     for j in range(1):
+    #         input = context.Context(3, 32, 32).view()
+    #         b.append(input)
+    #     d1.append(b)
+    # d1 = np.array(d1)
+    # d2 = np.array(d2)
+    #
+    # # without batch generated
+    # #    d1 = []
+    # #    d2 = []
+    # #    for i in range(6):
+    # #        input = context.Context(3, 3200, 3200).view()
+    # #        d1.append(input)  # input level
+    # #
+    # #    for i in range(6):
+    # #        input = context.Context(3, 3200, 3200).view()
+    # #        d2.append(input)  # input level
+    #
+    # opts.batch_size = 2  # for testing purpose
+    # # train_dataset = building_numerical_dataset.SignalGameDataset(d1)
+    # train_dataset = building_numerical_dataset.SignalGameDataset()
+    # train_loader = train_dataset.getloader(batch_size=opts.batch_size, shuffle=True)
+    # # val_dataset = building_numerical_dataset.SignalGameDataset(d2)
+    # val_dataset = building_numerical_dataset.SignalGameDataset()
+    # validation_loader = val_dataset.getloader(batch_size=opts.batch_size, shuffle=True)
 
 
 
-#    import context
-#    import building_numerical_dataset
-#
-#    c1 = context.Context(3, 320000, 320000)
-#    c2 = context.Context(3, 320000, 320000)
-#
-#    train_dataset = building_numerical_dataset.SignalGameDataset(c1)
-#    train_loader = train_dataset.getloader(batch_size = opts.batch_size, shuffle = True)
-#
-#    val_dataset = building_numerical_dataset.SignalGameDataset(c2)
-#    validation_loader = val_dataset.getloader(batch_size = opts.batch_size, shuffle = True)
+    # train_loader = OneHotLoader(n_features=4096, batch_size=opts.batch_size,
+    #                             batches_per_epoch=opts.batches_per_epoch)
+    # test_loader = OneHotLoader(n_features=4096, batch_size=opts.batch_size,
+    #                            batches_per_epoch=opts.batches_per_epoch, seed=7)
+
+    train_loader = OneHotLoader(n_features=300, batch_size=32,
+                                batches_per_epoch=100)
+    test_loader = OneHotLoader(n_features=300, batch_size=opts.batch_size,
+                               batches_per_epoch=100, seed=7)
 
 
     game = get_game(opts)
@@ -117,7 +162,7 @@ if __name__ == '__main__':
     else:
         callbacks = None
     trainer = core.Trainer(game=game, optimizer=optimizer, train_data=train_loader,
-                           validation_data=validation_loader, callbacks=callbacks)
+                           validation_data=test_loader, callbacks=callbacks)
 
     trainer.train(n_epochs=opts.n_epochs)  # default is 10
 

@@ -1,0 +1,1755 @@
+Last login: Sat Oct 19 21:53:13 on ttys008
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[ 69323 117986 163347 ... 200447 294873 125931]
+[203397 170774 259734 ... 168632 274643 123351]
+[271298  86337 109692 ... 163232 132014 124096]
+[ 90738  92821 273200 ...  80509   2758  19381]
+[173672  22750 150460 ... 140981 306186   5600]
+[156878  76893 212313 ...  98966  77334 191797]
+Traceback (most recent call last):
+  File "train.py", line 109, in <module>
+    train_loader = train_dataset.getloader(batch_size = opts.batch_size, shuffle = True)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/building_numerical_dataset.py", line 17, in getloader
+    return DataLoader(self, batch_size = batch_size, shuffle = shuffle)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 213, in __init__
+    sampler = RandomSampler(dataset)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/sampler.py", line 92, in __init__
+    if not isinstance(self.num_samples, int) or self.num_samples <= 0:
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/sampler.py", line 100, in num_samples
+    return len(self.data_source)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/building_numerical_dataset.py", line 8, in __len__
+    return len(self.c.dims)
+AttributeError: 'numpy.ndarray' object has no attribute 'dims'
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[311156  10079  86936 ... 217974 316855 290226]
+[273084  72030 303520 ... 173658 229376  89493]
+[ 83892 225484 301084 ... 213175  40452 105375]
+[189175   8133   8496 ... 122426 124461 216895]
+[184010 160161  85264 ... 206077 185862  61391]
+[247100  54119 202407 ... 206110 145963  70334]
+[180311 206597  13095 ...  86093 309758  18686]
+[ 54133 242198  52040 ... 231374 161679 258356]
+[215960 267122 288411 ...  54270 274943  30598]
+[ 58567 284426 103065 ... 231003 236819  31866]
+[ 10657 200888 150202 ...  16023 258543  81600]
+[269467 314871 138106 ...  68177 210885 121904]
+[169872  75714 272677 ...  16160 292035 128635]
+[104882 307354  92892 ... 181004  20691  78158]
+[183468  59528 110592 ... 107626  54094 294286]
+[174308 133361  91499 ... 140990 111266 286621]
+[217604  60017 121133 ... 148629 207189 179529]
+[177459 225987 134944 ... 190278 114950 118548]
+[185576   1210  28883 ...  38263 144984  93542]
+[313128 209731  69295 ...  89970  44128  51303]
+[139256 253174 255017 ... 189341 236842 312640]
+[244992 286750 240051 ...  81777  70332  98843]
+[ 16359 303748 119819 ...  26318 270810 273621]
+[ 11406 103346 202422 ... 186568 261671 102787]
+[262526 240553 215404 ...  87049 148910 266907]
+[ 23147 297034  50044 ... 232955  92474 310386]
+[289523  13642 301421 ...  31414 164859  25833]
+[ 64075 149548 265231 ...  31991  25700 282301]
+[291372 149284 187083 ... 229468 308451 129236]
+[151502  45406 176907 ... 132289 233002 137572]
+[243818  28311 132437 ... 175407  31983 222100]
+[288753   8760 260553 ... 235297 221591 138408]
+[232986 250382     38 ... 145923 163133 250858]
+[145610  87629 191500 ... 141626 234300 309131]
+[ 46616 294658  93701 ...  45570 265329  60040]
+[  4018 202119 189022 ... 266659  40468 172362]
+^Z
+[1]  + 44082 suspended  python3 train.py 
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[1429 1195 1897 ... 1319  291 3135]
+[1840  884 2110 ... 3136   65  422]
+[2022  377 1715 ... 2882 1654 2691]
+[2333 1173 1954 ... 1443 2972  402]
+[ 326 1329  794 ...  510 2620 1192]
+[1501 2971 1564 ... 2659 1957 1895]
+[3188 2436 2969 ...  851 2255 3031]
+[1900 2249  353 ...  483  668  719]
+[1709 1433  525 ... 1557 1461 1526]
+[1294  451 3021 ... 2753 1106 1314]
+[1103 1856 1389 ... 1826 1468 1899]
+[2591 2493 2859 ... 1468 2347 1682]
+[3170  199   25 ... 1978 2234 2653]
+[1905  563 2849 ... 1543 2848 1297]
+[2021 2009 1286 ... 1841 2298   55]
+[2450 2985 1236 ... 2711 2852  218]
+[ 593 2918 1072 ...  547 2201  130]
+[  49 1351  365 ... 1837 2317 2444]
+[2284 1911  304 ... 2168 2456 3101]
+[2461  990 1415 ... 2227 1754  244]
+[1122  392 3117 ... 1118  723 2906]
+[1523 1994 3114 ...  240  156 1969]
+[1080 2376 1744 ... 1191 3038 1108]
+[1337  437 2589 ... 1295 2210 2215]
+[1488  916  406 ... 2759 2525 2696]
+[3004 2643 1409 ... 2450 1969   82]
+[ 967 2693 1445 ...  687 2606 2956]
+[ 911  866  625 ... 1204 1905  251]
+[3188 1154 1806 ...  350 3045  203]
+[1140 1967 1276 ... 1616 1171 1443]
+[2977  368 1114 ... 1022 2785  797]
+[1335 3101 1875 ... 1506 2462  235]
+[1893 1756  895 ... 2301 1910 1840]
+[2212 2263 1360 ... 1458  315  330]
+[2217 1762  105 ...  571 2422 1982]
+[ 626 1006 1853 ...  483 2356 2138]
+[ 183 3095 2310 ... 1821 2240   82]
+[1602 1900  578 ... 2974  209  113]
+[ 139  378 2046 ... 2857  913 2824]
+[1456  815 2672 ...  119 1485  460]
+[2220 1026 1765 ... 2959  996 3077]
+[1377 1299 2310 ... 1353 2130 2114]
+[ 432 2785 2402 ... 2320 1157 1410]
+[ 381 2181  848 ...  315 1617 1198]
+[2572  930  799 ... 2419 1424 1876]
+[ 345 1409 1536 ...  100 1769 2369]
+[2592 2803 2727 ... 2782 1438 2999]
+[ 148  821 1632 ... 1505  454 1754]
+[  61 1466   63 ... 2693 2496 2216]
+[2821 1601 1953 ...   84  713 2726]
+[ 584 2056  421 ...  824 3138 2944]
+[ 880 2864  738 ... 3028 1069 2229]
+[3117 2468 2152 ... 2614   87 1024]
+[2926 2645  444 ... 2503 2989  184]
+[2968 1420 1648 ... 2899  429 1821]
+[1648 2022  332 ...  728  244 2640]
+[1833 1603  739 ...  793 2574 1600]
+[ 253 1484 2612 ... 1367 2908  613]
+[2881 2116  255 ... 1297  919 1814]
+[2922 1420 1737 ... 2099 2193  121]
+Traceback (most recent call last):
+  File "train.py", line 111, in <module>
+    train_loader = train_dataset.getloader(batch_size=opts.batch_size, shuffle=True)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/building_numerical_dataset.py", line 17, in getloader
+    return DataLoader(self, batch_size = batch_size, shuffle = shuffle)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 213, in __init__
+    sampler = RandomSampler(dataset)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/sampler.py", line 92, in __init__
+    if not isinstance(self.num_samples, int) or self.num_samples <= 0:
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/sampler.py", line 100, in num_samples
+    return len(self.data_source)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/building_numerical_dataset.py", line 8, in __len__
+    return len(self.c.dims)
+AttributeError: 'list' object has no attribute 'dims'
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[1747  617 1255 ...  610 1504 3090]
+[2777 1340 1361 ... 1332 2836  157]
+[  97 2573 1349 ... 1785 1741 1361]
+[1192 1831  832 ...   91  208  822]
+[1044 3105  580 ... 2346 2539 1392]
+[ 405 1784 2655 ... 2554 2634 2453]
+[ 750 2966 1376 ... 1672 2885 2095]
+[1592 3146  688 ... 2085 2272 3114]
+[2608  395 3072 ... 2787  399 1828]
+[ 659 2608 1333 ...  610 1954  687]
+[1324 1224 1635 ... 2939 1302 1590]
+[1128 2319 2967 ... 1798  753 1055]
+[1889 2306  216 ... 1805 2161  689]
+[ 249  463  269 ... 1794 1287 2803]
+[ 969 1181   48 ... 1003 2487  704]
+[2247 3095 1550 ... 2216 1610 1257]
+[ 862 1142 1295 ...  686 2887 1930]
+[2922 1367 2081 ...  721  335  885]
+[2927  434  128 ... 2615  158 1932]
+[ 179 2979 2631 ... 2661 2074  360]
+[1868  449 1539 ...  333 1716  552]
+[ 248 1207 2356 ...   31 1786 1294]
+[2101 1151  628 ...   80   43 1935]
+[1837 2129 1628 ... 1868 2087 3061]
+[1579 2220 2713 ... 1415  399 1252]
+[2095 2150  181 ... 1641 1353 2946]
+[   4 1935  891 ... 2783 1784 2182]
+[2063 2269 2462 ... 3048  479 2366]
+[2114  586 2168 ...  977 2308  287]
+[1600 3003 2513 ...  755 1561 1000]
+[2874 2654 2310 ... 2445 3175 1558]
+[ 345 1760  771 ... 1148 1587 2741]
+[ 201  222 1398 ... 3023 2198  887]
+[ 804 1231 2356 ...  593 3116 1745]
+[1467 2440 2595 ... 1096  866 1042]
+[3156 1354 2600 ... 2833  570 1220]
+[1574 2490 2198 ...  742 2596 1995]
+[ 478 1225 2296 ...  493 1054 2854]
+[2923  680 2198 ... 2432 2273  402]
+[1125 2274 2847 ...  691 1239 2346]
+[2089 1905 3150 ... 1390  178  596]
+[2538 2530 1397 ... 2687  577 1089]
+[ 711 2425 2793 ... 1700 1425 1386]
+[3150 1958 2519 ... 1503 1002 1574]
+[ 565 1813  805 ... 3171 1572 2469]
+[3076 1972 1243 ...  735 2065  402]
+[ 482 3172   52 ... 1037 2476 2918]
+[2996 1247 1054 ...  853 2037 2967]
+[1675 2701 2540 ... 1876  249  893]
+[  80  509 2924 ... 2556 1593 2901]
+[3075  683 1459 ... 1439  703  667]
+[1949  818  432 ... 2061 1114 2925]
+[1138 2689 1187 ... 1869 2511 2982]
+[  52 2994  715 ...  241 1266 1740]
+[2249 1806 2726 ...  705 2070  384]
+[2982 1643  442 ...  968 2499  383]
+[1063 2765 2745 ... 1401 1361 2642]
+[2731 1575  558 ... 1796 2338 2859]
+[2022 2779  882 ... 1030 2178 3072]
+[1026 1190 2827 ... 2439 2862  497]
+Traceback (most recent call last):
+  File "train.py", line 115, in <module>
+    train_loader = train_dataset.getloader(batch_size=opts.batch_size, shuffle=True)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/building_numerical_dataset.py", line 17, in getloader
+    return DataLoader(self, batch_size = batch_size, shuffle = shuffle)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 213, in __init__
+    sampler = RandomSampler(dataset)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/sampler.py", line 92, in __init__
+    if not isinstance(self.num_samples, int) or self.num_samples <= 0:
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/sampler.py", line 100, in num_samples
+    return len(self.data_source)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/building_numerical_dataset.py", line 8, in __len__
+    return len(self.c.dims)
+AttributeError: 'numpy.ndarray' object has no attribute 'dims'
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[1778 1990 2981 ... 2767 2071 1088]
+[ 184 2245 1413 ...  498 1276 1400]
+[2195 2711 2357 ... 1262 1207 1491]
+[2663 1861  962 ...  823 2779 2307]
+[2087  443 1867 ...  198  139 1251]
+[3198 2373  451 ... 2893 2612 2259]
+[1620 2851 1155 ... 1892 3149 2409]
+[1495 1569  969 ... 1705 2702 2894]
+[ 820 2564 2746 ...  189 1840 2958]
+[1807 2778 1271 ...  704  261 2006]
+[2916  154   35 ... 2160 2232 1024]
+[2809 1608 2806 ... 2670  293 1450]
+[2890 1852 2377 ...  178 1510 2621]
+[2767 1979  495 ... 2583  518  226]
+[ 942 2239  949 ... 1629 1645   34]
+[1563 3057 1836 ... 2080  490 2954]
+[1794 2196 2034 ...  918 1721 2364]
+[ 162 1816 2596 ...  256 2730 1926]
+[2408  693 1297 ... 1979  367  731]
+[ 393  264  344 ... 3100  285  108]
+[1546 1590 1148 ... 1341 3015 2687]
+[1134 2505 1829 ... 1246 2953 1074]
+[2638  181  199 ...   88 2574 2033]
+[2577 2495 2144 ... 2855  890 3107]
+[ 486 2541 3174 ... 2047  245 2041]
+[1814 1023 2269 ... 2460 1130 1034]
+[2419 3010 2751 ... 2709 2323 2844]
+[2274 2126 1553 ... 1880 2741 1763]
+[ 256  339  161 ...  725 1467 2605]
+[1738  158  729 ... 1888 2756 1298]
+[2888 1602   11 ... 1682 3187 1327]
+[1576 2247  892 ... 2925  325 1374]
+[ 645 3019 1916 ... 2872 1348 1509]
+[3141  358 1902 ... 1145  359 1082]
+[2230 2273 2430 ... 1601 1927 1617]
+[1395 1178 2069 ... 2447 1600 2215]
+[2053 1237 1013 ... 1332 2237 2628]
+[3045 3068 1012 ...  329 1474 1061]
+[1507  814 1330 ...  899 2689   84]
+[3134 1805  260 ... 1314 2346 3020]
+[1520 2744 1843 ... 1567  300  894]
+[1092  316  643 ...  999  682  142]
+[ 573  575 2784 ...  563 2809 1164]
+[ 952  741  431 ...  813 1065 3078]
+[ 962 1320 1580 ...  601 1025 1367]
+[ 708 1310 1016 ... 1567 2671 1679]
+[1726   14 2629 ...  555 2440 2535]
+[1042 3159 1219 ... 1000 2802 1773]
+[ 886 2558  827 ... 1352 2308 1711]
+[2057  545 1646 ... 1257 2491 1269]
+[3027  665 2803 ...  517 2050 1505]
+[ 713  762 2093 ... 1635  181 1473]
+[1522  416 2783 ... 2808 3040  744]
+[2315  843 1947 ...  293 1535 1100]
+[2477 2713 2906 ... 1540 1059 1575]
+[ 812  473 3171 ...   49 1352 1518]
+[3102  235 1910 ... 2915 1394 1773]
+[2746 1985 2837 ... 1905  533 1057]
+[1481 2914 2345 ... 1669 2153 1373]
+[ 629 1813 2514 ... 1184 1782 1506]
+Traceback (most recent call last):
+  File "train.py", line 114, in <module>
+    train_loader = train_dataset.getloader(batch_size=opts.batch_size, shuffle=True)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/building_numerical_dataset.py", line 15, in getloader
+    sg_dataset = SignalGameDataset(self.c)
+AttributeError: 'SignalGameDataset' object has no attribute 'c'
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[3150 1363 2572 ... 1536 1076 2538]
+[2425  594  703 ... 2935  347 1666]
+[  81 1297  421 ...  208 1281  829]
+[2647 3162  775 ... 2310 1905 2247]
+[2738 2148 2125 ... 2129 1524 2267]
+[2528 2077 1748 ... 1976  915 1418]
+[ 787  791 1611 ... 2829  769 3006]
+[ 693 1038 2596 ... 1078  292  644]
+[2943 2430  961 ... 1963 1452 2718]
+[3016 2775 1893 ...  526 2383 2698]
+[3081  924 2765 ... 2102 1839    3]
+[1561 3197  555 ... 2237 1578  478]
+[1540 1605  588 ...  206   32 2358]
+[1061 2143 2886 ... 2628 2688  471]
+[3034 2623  979 ...  908 1243 2076]
+[ 864 2130 2640 ... 1780 2841 1616]
+[ 219 1326 1983 ... 2841 3158 2369]
+[ 389 2612 1309 ... 2393 1518 2412]
+[1373  914 2339 ... 2726 2426  853]
+[ 773 1888 2947 ... 1470 2965 2412]
+[1452 2325 2088 ... 1965  252  814]
+[ 350 1324 3062 ...  427  134  441]
+[ 434 1462 1988 ...  185 3096 1952]
+[2941  616 1710 ... 1476 1641 1945]
+[2862  246 2059 ... 1345 2984 2723]
+[ 270 3196 2160 ...  390 2405  438]
+[1901 2917 2642 ... 3138 1392 1665]
+[1355  658 2798 ... 2269 1734  798]
+[ 901 2103  133 ... 1376  736   98]
+[2881 1315 2168 ... 2866 1379  414]
+[3164 2457  665 ... 2754  105 1736]
+[2726 1997 2459 ... 1509  211 1978]
+[3001 2534 2003 ...  108 3072  572]
+[ 956 2519 1768 ... 2638  718 1690]
+[ 935 2280 1628 ... 2533  834 1775]
+[3091 2067  405 ... 3031 1693 2932]
+[2457 1576 1877 ... 2671 1141  141]
+[1317 2451 2223 ...  486 2720 1569]
+[2511 2240  585 ...  725 1090 1264]
+[ 117  353 2514 ... 1608 2808 1650]
+[2646 1439 1216 ... 1026  959 2787]
+[1564 2857 2101 ... 3090  344 1066]
+[ 170 2168  231 ... 1849 3185 3059]
+[1495  726   57 ... 2147 2054  319]
+[ 150  710 3016 ... 1745 2540  112]
+[1092   36    8 ... 2378 2469  809]
+[1923   67  367 ... 1060 1202  398]
+[2886 2470 2847 ... 1755 2153 1963]
+[  74  209  276 ... 1205 3013 2968]
+[ 463 3105  457 ...  819 2020 1044]
+[3023 1395  267 ...  136 1118 2348]
+[3043 2383 2752 ... 1157 1603 2880]
+[ 728 1180 1808 ... 2255 1340 1747]
+[1890 1060 1655 ...  478 2131  650]
+[ 542 1770  409 ... 2632 2876  737]
+[2130 2151 1895 ...  364 2180 2577]
+[1654 2882 1848 ... 2357  590 2832]
+[1223  874 2759 ... 2706 2081 2579]
+[ 656 3042 1119 ... 2488 2913 2136]
+[1978  170 1211 ...  994 2055  975]
+Traceback (most recent call last):
+  File "train.py", line 114, in <module>
+    train_loader = train_dataset.getloader(batch_size=opts.batch_size, shuffle=True)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/building_numerical_dataset.py", line 18, in getloader
+    return DataLoader(self, batch_size = batch_size, shuffle = shuffle)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 213, in __init__
+    sampler = RandomSampler(dataset)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/sampler.py", line 92, in __init__
+    if not isinstance(self.num_samples, int) or self.num_samples <= 0:
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/sampler.py", line 100, in num_samples
+    return len(self.data_source)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/building_numerical_dataset.py", line 9, in __len__
+    return len(data)
+NameError: name 'data' is not defined
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[ 562 2065  922 ... 1802 1737 2049]
+[ 152  255 3177 ...  708 2826 1604]
+[ 885 1883 2017 ... 1030 1036  688]
+[ 977  488  691 ...  809 2421 1329]
+[ 442  407 1286 ...  992 2910 2345]
+[1419   89 2718 ...  468 2116 1938]
+[1178 2751 1829 ...  964  806 2801]
+[ 618 1225  506 ...  262 2786 1401]
+[2706 1530 3055 ...  209  120 2705]
+[ 925 2418 2696 ...  798 2811  936]
+[ 922  516 1132 ...  734  182 1615]
+[2372  467 2026 ... 1849 2794 2781]
+[1424 1229 1031 ... 3012  667 2546]
+[1284 1985 1171 ...   81 2687 1012]
+[2830 1087 2207 ...  958  791  775]
+[ 888 2087 2842 ... 2634 1843 2307]
+[2925 2387  256 ... 1101 2712  831]
+[  48  464  256 ... 2199 2528 2928]
+[1762 1644  317 ... 1149  173 1471]
+[ 577  322 1940 ... 1136 2852  758]
+[1863 3058  315 ...  956 1805 1452]
+[ 201 2395 1225 ... 2236  537 1317]
+[3014 2904 1794 ... 1590 2573  173]
+[1218 2595 3185 ... 1451 3042 1077]
+[2924 1191 2235 ... 2511 3132  198]
+[1210  860 2567 ... 2902 1120 2917]
+[ 644 2313 2097 ... 1846 3049  905]
+[ 727 2003 2468 ... 2017 2402  722]
+[ 615  505 1714 ...  185 2296  579]
+[1448  412 1197 ... 2176 2772  978]
+[1380  809  852 ...  575 3199  374]
+[ 224 1036 2936 ... 2151 2100 1238]
+[1757  425  191 ... 2453 1949 1670]
+[ 281 1827 1056 ...  687 1201 2654]
+[1077  553  629 ... 1487 2567  307]
+[1632 1683 3096 ...  865 2884 2151]
+[1438 2945 1076 ... 2699  629    3]
+[2567  983 2925 ... 2208  640   49]
+[ 448 2092 3172 ... 1102  177 2954]
+[ 261 2190 2271 ... 3060 2644  570]
+[1469 2186 1691 ... 2143 1447 2078]
+[ 516 2843 3118 ... 2623 2330 1436]
+[1500 1703  325 ... 2985  808 1213]
+[2498 1212 2921 ... 1121  851 2845]
+[2798  154  762 ... 2309 1422 2942]
+[ 849 1170  252 ... 3180  349 1162]
+[2033  688  145 ... 2837  865  345]
+[2974  629  600 ... 2008 3123 1066]
+[2062  316  234 ... 1642  991 2432]
+[ 610  205 1987 ... 2757 2649  141]
+[ 607 3024 2381 ... 2184 2206  265]
+[1519 1744 2910 ...  232 1666  400]
+[1043 3157 2278 ... 1470 1580  409]
+[2546 2714 2877 ... 2961  555  814]
+[2195  195  484 ... 2274  683 1463]
+[ 766   75 2702 ... 1206 3059 2384]
+[   9 2626 3044 ...  200  636   89]
+[2899 1445  655 ... 1563 3061   43]
+[ 280 3021 3126 ... 1626 2555 2886]
+[  85 2260 1896 ... 1236  538 1369]
+Traceback (most recent call last):
+  File "train.py", line 130, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 153, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 133, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+TypeError: forward() takes from 3 to 4 positional arguments but 11 were given
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[ 881 1475 1414 ... 1699 2091 1746]
+[2041 2211  538 ...  660  711  875]
+[ 656 2697  763 ...   23 2580 2491]
+[ 193 2786 1381 ...  282  258 1424]
+[1136  905 2284 ... 2093 1975 2470]
+[2048 1529  599 ... 2678 1420 2264]
+[ 126 1818 1816 ... 1825 2562  362]
+[1791  601  639 ... 1513 1589  119]
+[ 314 2023 1527 ... 2520 2035 2165]
+[ 406  785 1186 ...  768 3109   81]
+[ 319 2105 1678 ...  174 2657 2198]
+[1257 1179    7 ... 2374 2099  171]
+[1395 2155 2981 ... 2152 1601 2881]
+[1779 1801  348 ... 1307 2571 2358]
+[ 427 2636   36 ...   64  795  504]
+[1833   32 1107 ... 2561 2970   90]
+[1913 1109 1425 ... 1958 3026  758]
+[2311 1865 2641 ... 2802 3166 2897]
+[   3 2418 1373 ... 2070  519 2633]
+[1949 2818  788 ... 3153  718 2469]
+[2277  511 1611 ... 1510   36  107]
+[2647 2814 1673 ... 2969 1162 1727]
+[ 614 3194  366 ...  915 1401 2716]
+[1715 1131 1162 ... 1124 2360 2813]
+[ 261 2103 1397 ... 2000 2309 2498]
+[3085  283 1819 ... 2779 1916  884]
+[ 439 2130 2056 ... 2450 2704 1734]
+[3125  818 2891 ... 2586 1287 1720]
+[2899   94  835 ...  480 1109  993]
+[2382 2073  826 ... 2451 1246  213]
+Traceback (most recent call last):
+  File "train.py", line 130, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 153, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 133, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+TypeError: forward() takes from 3 to 4 positional arguments but 6 were given
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[1514 2818 2252 ...  687  965 2814]
+[2947 2395 1929 ... 2379 3057 1450]
+[ 118 2626 3171 ... 2123 2868 1711]
+[3081 3146 2685 ... 1100  948  725]
+[3156  703 2581 ...  569 1760  357]
+[2387 2102 1029 ... 1382  907 2137]
+[ 412 2805  257 ... 1587 2743 1739]
+[1939 1677    2 ...  754 1520 1117]
+[2387 2261  683 ... 1737 2602 2005]
+[ 189 2996 1453 ...  490 2240 1684]
+[1382 3006 2155 ... 2824 1112 2412]
+[1162 2095 2019 ... 2532  979  629]
+[1722 2875 1088 ...  278 1483 2421]
+[2179 1901   53 ... 2903  323  595]
+[2741  737   39 ... 1542 1781 1852]
+[2119  930 2959 ...  269  197  708]
+[2261  145 1328 ... 2071 1618 2848]
+[ 263 1954 1881 ... 1947  746 2628]
+[2203 2011 1313 ... 1092 3003 1386]
+[2929 2557 3089 ... 1499 1216 2496]
+[ 356 2977 2878 ...   15 2127 2406]
+[1967 1066  200 ... 1888 1637 2021]
+[ 958 2948  406 ...  393 2817 1270]
+[ 296 2908 2830 ...  597  728 2472]
+[2545 2833 2997 ... 2026 2399 1423]
+[2028 2691 1208 ...   26 2896 1618]
+[2135 2268 1474 ... 1773 2672   63]
+[1962 2735 2431 ... 2652 1926  418]
+[3035   27 1277 ...  621   34 3092]
+[1545  733 1502 ... 2384 3166 2755]
+Traceback (most recent call last):
+  File "train.py", line 130, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 153, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 133, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+TypeError: forward() takes from 3 to 4 positional arguments but 6 were given
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[   3  767 1027 ... 2746  138 1742]
+[ 293 2131 2005 ...   75 3121 2585]
+[2542 2673 2559 ...  964 2340 1501]
+[1212 2781 2918 ...  192 2985 1361]
+[1179 2882 2502 ...  236 1808  418]
+[ 601 1028 2755 ... 1779 1522 2214]
+[ 522 2049 1661 ... 3036 1337 2677]
+[2464 3131 1778 ... 2468  349 1453]
+[ 965 2125  857 ... 1953 3160 3049]
+[ 184 1791  717 ... 2442 3190 2446]
+[2021 1922  603 ... 2614 1409 1643]
+[2281 3146 2611 ... 1948 2837  380]
+2
+Traceback (most recent call last):
+  File "train.py", line 130, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 153, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 133, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 112, in forward
+    message, sender_log_prob, sender_entropy = self.sender(sender_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 42, in forward
+    logits = self.agent(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 31, in forward
+    emb = self.return_embeddings(x)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 58, in return_embeddings
+    if len(h.size()) == 3:
+UnboundLocalError: local variable 'h' referenced before assignment
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[ 469  718  523 ... 2536  740  384]
+[1654 2303 1496 ...  393 2875 1817]
+[1682 2701 2135 ... 1041 2049 1529]
+[ 669 1023  196 ... 2644 2282  710]
+[2258 2348  746 ... 1856 2749  171]
+[1744 2603  793 ...  801 2544 2078]
+[ 879  336  636 ... 1388 2141   61]
+[1696 1079 2482 ... 2680  207 2962]
+[2419 2628 1284 ... 2585 1084 2071]
+[ 354 1193 1237 ... 2902  565  145]
+[ 996 2820 1892 ... 3032 1657 1238]
+[1338  361 2310 ...  954 1015  537]
+2
+Traceback (most recent call last):
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 62, in return_embeddings
+    h_i = self.lin1(h)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 87, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/functional.py", line 1371, in linear
+    output = input.matmul(weight.t())
+RuntimeError: both arguments to matmul need to be at least 1D, but they are 0D and 2D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "train.py", line 130, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 153, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 133, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 112, in forward
+    message, sender_log_prob, sender_entropy = self.sender(sender_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 42, in forward
+    logits = self.agent(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 31, in forward
+    emb = self.return_embeddings(x)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 63, in return_embeddings
+    except RunTimeError:
+NameError: name 'RunTimeError' is not defined
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[2365 1622 1370 ... 3175 1721 2164]
+[ 650 1840 2742 ...  630 1619 1509]
+[1079 1755 2413 ... 2718 1896 1499]
+[3013  941 2528 ... 1962 2284  342]
+[2701 2643 1382 ... 2323 2992 2676]
+[2638  726 1669 ... 2788 2836  852]
+[1367 2959 2402 ... 1934 2941 1040]
+[1428  398 3050 ...  159  835  257]
+[3163  901  112 ...  611  384  851]
+[1984   68 2132 ... 1604 2726  250]
+[2416 2010 3165 ... 1768  331  486]
+[1877 2262 2029 ... 1084  634 2797]
+2
+Traceback (most recent call last):
+  File "train.py", line 130, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 153, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 133, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 112, in forward
+    message, sender_log_prob, sender_entropy = self.sender(sender_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 42, in forward
+    logits = self.agent(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 31, in forward
+    emb = self.return_embeddings(x)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 61, in return_embeddings
+    h_i = self.lin1(h)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 87, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/functional.py", line 1371, in linear
+    output = input.matmul(weight.t())
+RuntimeError: both arguments to matmul need to be at least 1D, but they are 0D and 2D
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[1580 2974 1418 ...  270 3061  768]
+[1978 1084 1307 ... 1621  793 1816]
+[1847  665 2460 ... 1631 2392 2357]
+[  14 3092 2846 ...  427  819 1969]
+[1829 1445 2577 ...  319 2912 1574]
+[1322  650 1529 ... 2186 2049 1049]
+[1360  360  373 ... 1259  830  110]
+[1971 2246  719 ...  484 1463 2226]
+[ 981 1343  449 ... 2974 1912 2704]
+[ 774 2049 1474 ... 2747 1193  389]
+[2811 2971   79 ...  789  192  308]
+[ 809 2453 1896 ... 2355 2521 2349]
+game size: 2
+Traceback (most recent call last):
+  File "train.py", line 130, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 153, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 133, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 112, in forward
+    message, sender_log_prob, sender_entropy = self.sender(sender_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 42, in forward
+    logits = self.agent(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 31, in forward
+    emb = self.return_embeddings(x)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 61, in return_embeddings
+    h_i = self.lin1(h)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 87, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/functional.py", line 1371, in linear
+    output = input.matmul(weight.t())
+RuntimeError: both arguments to matmul need to be at least 1D, but they are 0D and 2D
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[1144 2250 2671 ... 2309 2794 1508]
+[2379 1376 1579 ... 2498 2487  789]
+[2347 1612 1311 ... 1328  153 1660]
+[1406 1623 1857 ...  258 1155  741]
+[ 173 1144 2065 ...  794 2189 1464]
+[1335  701  722 ... 1927  141  944]
+[ 127 2885 2042 ... 2052  315 1476]
+[1566  823  555 ... 2555 1662 2813]
+[ 383 1268  841 ...  133 2362 1486]
+[1551 2015 3134 ... 2685 2554  623]
+[ 292  564 1890 ... 2044 2167 2424]
+[1741  139 2767 ...  776  383 2681]
+game size: 2
+Traceback (most recent call last):
+  File "train.py", line 130, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 153, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 133, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 112, in forward
+    message, sender_log_prob, sender_entropy = self.sender(sender_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 42, in forward
+    logits = self.agent(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 31, in forward
+    emb = self.return_embeddings(x)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 58, in return_embeddings
+    print("type of input" + str(type(h)))
+UnboundLocalError: local variable 'h' referenced before assignment
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[2699 2169  841 ... 1432 1525 1390]
+[1101 2684 1242 ... 2200   28  444]
+[1809  992 2926 ... 2211  824 1145]
+[ 602 1796 1815 ... 2553 1642 2351]
+[2456  255 2943 ... 2305 1187 2267]
+[3006  494  346 ...  293 1581 2269]
+[1640 1069  797 ... 2074 1502 2958]
+[ 523  179 1207 ... 2064  363 1935]
+[2337  136 1333 ... 1715  184  341]
+[ 776 2877  106 ... 2638 1868 2548]
+[  58 2956 1860 ...   34 1885 1939]
+[2994  750  480 ... 2525 2009 2328]
+game size: 2
+type of input<class 'torch.Tensor'>
+Traceback (most recent call last):
+  File "train.py", line 130, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 153, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 133, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 112, in forward
+    message, sender_log_prob, sender_entropy = self.sender(sender_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 42, in forward
+    logits = self.agent(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 31, in forward
+    emb = self.return_embeddings(x)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 63, in return_embeddings
+    h_i = self.lin1(h)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 87, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/functional.py", line 1371, in linear
+    output = input.matmul(weight.t())
+RuntimeError: both arguments to matmul need to be at least 1D, but they are 0D and 2D
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[ 255 2698 1903 ... 1322  921 2033]
+[2862  461 2823 ...  550 2490 1486]
+[2093 1146 2311 ...  506 3080 2317]
+[2961  424  222 ...  888 2284 2426]
+[1405  847 1546 ...  793 1496 2697]
+[2811 1151  519 ... 1702 1430 2498]
+[ 164 2670  477 ... 1603 2882  942]
+[2651 1857  492 ...  481 3081 1459]
+[2575  891 1914 ...  708 2693 2324]
+[2283 1456 1428 ...  738 1744 1661]
+[  87 2711  841 ... 2595  610  659]
+[ 212 2114 1902 ... 1573 2036 3176]
+game size: 2
+type of inputtorch.Size([])
+Traceback (most recent call last):
+  File "train.py", line 130, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 153, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 133, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 112, in forward
+    message, sender_log_prob, sender_entropy = self.sender(sender_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 42, in forward
+    logits = self.agent(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 31, in forward
+    emb = self.return_embeddings(x)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 63, in return_embeddings
+    h_i = self.lin1(h)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 87, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/functional.py", line 1371, in linear
+    output = input.matmul(weight.t())
+RuntimeError: both arguments to matmul need to be at least 1D, but they are 0D and 2D
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[3177 2475  677 ... 2633 1107 2794]
+[1814  288   33 ... 1247 2690 2699]
+[ 979 1437  406 ...  422 1975  481]
+[2748  378 2138 ...  260  310 1610]
+[ 670 2150  795 ... 2141 1944 2880]
+[2094  396 2475 ... 3106  312 1937]
+[1762 1734  724 ...  984 1116 2489]
+[1386 2392  950 ... 3086  673 2679]
+[2072 1300 2760 ...  296  168 1802]
+[2640 2628 1004 ... 1882 1775 1833]
+[ 485 1222 2397 ...  311 2692  576]
+[ 902  909 1760 ...   50 1541 2511]
+game size: 2
+Traceback (most recent call last):
+  File "train.py", line 130, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 153, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 133, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 112, in forward
+    message, sender_log_prob, sender_entropy = self.sender(sender_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 42, in forward
+    logits = self.agent(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 31, in forward
+    emb = self.return_embeddings(x)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 60, in return_embeddings
+    print("shape of tensor" + tf.shape(h))
+NameError: name 'tf' is not defined
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+Traceback (most recent call last):
+  File "train.py", line 12, in <module>
+    from egg.zoo.signal_game.archs import InformedSender, Receiver
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 60
+    import tensorflow as
+                       ^
+SyntaxError: invalid syntax
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[1853 2968  302 ...  989 2700  994]
+[1261 1868  709 ... 1865  439 1400]
+[2804  286 1123 ... 3112  738 1015]
+[ 450  199 2007 ... 2519 2462 1072]
+[  69  349 1444 ...  617  700   72]
+[  99  891 1351 ... 2740   92  600]
+[ 944  275 1855 ...  766 1221 2758]
+[2928 2715  677 ...   53  578  109]
+[ 819 3028 1940 ...  779 2241 1493]
+[ 893 2660 2989 ... 1303 2563  706]
+[2069  471  797 ... 1913  545 1849]
+[1361  209  809 ... 2846  149  332]
+game size: 2
+Traceback (most recent call last):
+  File "train.py", line 130, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 153, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 133, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 112, in forward
+    message, sender_log_prob, sender_entropy = self.sender(sender_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 42, in forward
+    logits = self.agent(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 31, in forward
+    emb = self.return_embeddings(x)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 61, in return_embeddings
+    print("shape of tensor  " + h.shape)
+TypeError: can only concatenate str (not "torch.Size") to str
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[2258 2344 2005 ...  416 1664 2128]
+[2182 2455 2028 ...  563 2327 1862]
+[ 971 1877 1834 ...  887 3175 1504]
+[ 300 2732  357 ...  493   45  866]
+[ 231 3179 1551 ...  450 2598 2916]
+[1868 1956 1516 ... 3144 2231 2788]
+[  54 2753 2430 ... 1689 1159 1809]
+[ 399  443 2620 ... 2694  827 1447]
+[2013 2238 1807 ... 3152  851 1162]
+[1275 2958  613 ... 2167 1635 2624]
+[ 853 2240 2663 ... 2999 1730 2722]
+[2317  529 3131 ... 2742 2883 2017]
+game size: 2
+shape of tensor  torch.Size([])
+Traceback (most recent call last):
+  File "train.py", line 130, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 153, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 133, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 112, in forward
+    message, sender_log_prob, sender_entropy = self.sender(sender_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 42, in forward
+    logits = self.agent(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 31, in forward
+    emb = self.return_embeddings(x)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 64, in return_embeddings
+    h_i = self.lin1(h)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 87, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/functional.py", line 1371, in linear
+    output = input.matmul(weight.t())
+RuntimeError: both arguments to matmul need to be at least 1D, but they are 0D and 2D
+➜  signal_game git:(master) ✗ 
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[2925 2949 2806 ... 2873  290 1900]
+[2541 1962  435 ... 1303 1287  990]
+[1695  239 1773 ... 1805 2126 1831]
+[2822 2675  584 ...  707 2434 1459]
+[3050  548 2328 ...  168  620 3020]
+[3026  317  676 ... 3189   46  576]
+[2694 1363 2657 ... 2300 2025  875]
+[ 255 3020 1178 ... 1009 2295 1453]
+[2603 2800 2401 ... 2347 2996 2451]
+[ 353 3165   31 ...  813  310 1296]
+[ 837 1969 1482 ... 2617 2204 1597]
+[1888 1022 1722 ... 1358 3098 2236]
+game size: 2
+shape of tensor  torch.Size([])
+Traceback (most recent call last):
+  File "train.py", line 130, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 153, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 133, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 112, in forward
+    message, sender_log_prob, sender_entropy = self.sender(sender_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 42, in forward
+    logits = self.agent(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 31, in forward
+    emb = self.return_embeddings(x)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 62, in return_embeddings
+    print("Tensor: "  + h.eval())
+AttributeError: 'Tensor' object has no attribute 'eval'
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[2769  476 1503 ...  273 1595 2730]
+[1832 2104 1205 ... 1865 1582 1498]
+[2210  832 2432 ... 1101 2698 1794]
+[  18  227 2057 ... 1395 2503 1035]
+[ 698 2154 1135 ... 1206 1300 2253]
+[  31 1721  738 ... 1632  145   72]
+[ 857  701  130 ... 1992 1778 1476]
+[2185 3032 1024 ... 1548  549 2666]
+[2943  546 1701 ... 3052 3149 1486]
+[ 162 2230 1991 ...  864  478  847]
+[ 785 2389  883 ...  824  274 1375]
+[1220 2973 2584 ... 1903 1171  497]
+game size: 2
+shape of tensor  torch.Size([])
+Traceback (most recent call last):
+  File "train.py", line 130, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 153, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 133, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 112, in forward
+    message, sender_log_prob, sender_entropy = self.sender(sender_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 42, in forward
+    logits = self.agent(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 31, in forward
+    emb = self.return_embeddings(x)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 62, in return_embeddings
+    print("Tensor: "  + str(h.eval()) )
+AttributeError: 'Tensor' object has no attribute 'eval'
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[ 887 1378  879 ...  240  435 1205]
+[ 195 2045  371 ... 3180 2494  932]
+[3137 2381 2783 ... 2305 2934 1212]
+[  66  222 1063 ... 2448 1286 2906]
+[ 966  975 1627 ... 2586 1776 1333]
+[ 948 2751  822 ... 1072   45  721]
+[3009 1201 1106 ...  770  221  438]
+[1765 1691  825 ... 2188 2192  775]
+[2702 1550  724 ... 2149 1857 1320]
+[3063  571 2809 ...   86 2832   50]
+[2568 2497  605 ... 2062 1886 1975]
+[ 204 1279 2148 ... 2388  256 3065]
+game size: 2
+shape of tensor  torch.Size([])
+Tensor: tensor(109)
+Traceback (most recent call last):
+  File "train.py", line 130, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 153, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 133, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 112, in forward
+    message, sender_log_prob, sender_entropy = self.sender(sender_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 42, in forward
+    logits = self.agent(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 31, in forward
+    emb = self.return_embeddings(x)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 65, in return_embeddings
+    h_i = self.lin1(h)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 87, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/functional.py", line 1371, in linear
+    output = input.matmul(weight.t())
+RuntimeError: both arguments to matmul need to be at least 1D, but they are 0D and 2D
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[2915  624 2490 ... 2652 1099 1158]
+[2772  643 1523 ... 2239  688  830]
+[  27 2853  904 ...  858 2625 1969]
+[2785 1402 3042 ... 2783 1081 2583]
+[1547 2457 1816 ...  863 2213   36]
+[2451  246 2390 ...  580 1076 3196]
+[2702 2148 1749 ... 2661  795 1007]
+[2826 3072  260 ... 1303 3049  356]
+[1616 2096  656 ...   27  544 1240]
+game size: 2
+shape of tensor  torch.Size([])
+Tensor: tensor(1280)
+Traceback (most recent call last):
+  File "train.py", line 130, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 153, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 133, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 112, in forward
+    message, sender_log_prob, sender_entropy = self.sender(sender_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 42, in forward
+    logits = self.agent(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 31, in forward
+    emb = self.return_embeddings(x)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 65, in return_embeddings
+    h_i = self.lin1(h)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 87, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/functional.py", line 1371, in linear
+    output = input.matmul(weight.t())
+RuntimeError: both arguments to matmul need to be at least 1D, but they are 0D and 2D
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[1482   75 1533 ...  816  437  173]
+[2596 2431  466 ... 1064 2559 2329]
+[2399 2413   88 ... 2912  935 1054]
+[1167 2956  266 ... 2136  227 1461]
+[1086 2027 2041 ... 1073 2490  105]
+[2494 2140  812 ... 2778 1127  363]
+[1297 1853 1271 ... 2978  335  573]
+[  12  938 2151 ...    1 1171 2706]
+[2832  380   43 ... 1685 2335 2088]
+game size: 2
+shape of tensor  torch.Size([])
+Tensor: tensor(1906)
+Traceback (most recent call last):
+  File "train.py", line 130, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 153, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 133, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 112, in forward
+    message, sender_log_prob, sender_entropy = self.sender(sender_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 42, in forward
+    logits = self.agent(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 31, in forward
+    emb = self.return_embeddings(x)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 65, in return_embeddings
+    h_i = self.lin1(h)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 87, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/functional.py", line 1371, in linear
+    output = input.matmul(weight.t())
+RuntimeError: both arguments to matmul need to be at least 1D, but they are 0D and 2D
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[  99 2878   88 ... 2303 2497  320]
+[1278 1525 3117 ...  999 2648 2190]
+[ 409 1141 2249 ... 1966  844  234]
+[1574  738 1936 ... 2888  768 2576]
+[ 214 2219 2737 ... 1060 2627 1697]
+[1463 2976 2119 ... 1223 2566  844]
+[  99 2546  451 ... 1108  620 1423]
+[ 110  917 1236 ... 1414 1907 2972]
+[2809  608 2466 ... 1030 1546  142]
+<class 'torch.Tensor'>
+game size: 2
+shape of tensor  torch.Size([])
+Tensor: tensor(2823)
+Traceback (most recent call last):
+  File "train.py", line 130, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 153, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 133, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 113, in forward
+    message, sender_log_prob, sender_entropy = self.sender(sender_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 42, in forward
+    logits = self.agent(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 31, in forward
+    emb = self.return_embeddings(x)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 65, in return_embeddings
+    h_i = self.lin1(h)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 87, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/functional.py", line 1371, in linear
+    output = input.matmul(weight.t())
+RuntimeError: both arguments to matmul need to be at least 1D, but they are 0D and 2D
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[ 817 2597  216 ... 2686 2042 1168]
+[ 609  937 1283 ...  786 2607  655]
+[ 305 2876 1060 ... 1265 2569 2956]
+[1992  255 2860 ...  224 1069 2917]
+[1990 1143 1234 ... 2848  524  373]
+[1666  936 1069 ... 2547 2992 1084]
+[1055 2264 1627 ... 1398  941 2109]
+[ 305  278 1932 ... 1941 1399  203]
+[1752  912 2005 ... 1594   73  775]
+[1246  223 2032 ...  784 2920 2667]
+[2037  891 2286 ... 1609 1212 1883]
+[1943 1014 2000 ... 1124 2154 2952]
+[1443  734 2360 ... 1393   15 1369]
+[2366  807  872 ... 2150 1752 1968]
+[ 734 1807  630 ... 2315 2587  302]
+[ 372  230  755 ... 2109 2011 2120]
+[2823  509 1793 ...  613   13 1579]
+[1177 1980 1215 ...  946 2110 1949]
+[2609  269 2488 ... 1428 2257  512]
+[1530 2409  668 ... 2943 2795 2912]
+[3033 1272 2132 ...  547  894 2276]
+[2016 2043   88 ... 2742 3013 2908]
+[1265 2152 2717 ... 2711 2617  541]
+[1051 2798  977 ... 1699 2222 1939]
+[2142 2945 2499 ... 1592 2272 2209]
+[1425 1158 2860 ... 1409  412 1089]
+[ 272  825 2582 ... 3072  890 3129]
+Traceback (most recent call last):
+  File "train.py", line 121, in <module>
+    train_dataset = building_numerical_dataset.SignalGameDataset(c1)
+NameError: name 'c1' is not defined
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[ 960  162 1328 ... 1479 1102 2187]
+[ 112 1694 1513 ...  405  304 1562]
+[ 738 3116 1665 ...  181 2838 2996]
+[ 196 2337 1682 ... 1213 2834 1626]
+[ 461  983 2674 ...  494  645 1636]
+[2908  308 2440 ... 2313 2430 2310]
+[2103 2270   91 ... 1845 1012 3091]
+[ 711 1696 1185 ... 1039 2824  780]
+[1948 1998  102 ...    3 1213 3161]
+[2688 2529 3029 ...  839 2823 3165]
+[3002  932 1222 ...   47 1986 1951]
+[1636  171 2632 ...  206 1713  386]
+[ 760 1143 2510 ... 2097  557 2359]
+[ 781 3179 1929 ... 1844 1348 2765]
+[ 754 1234 2804 ... 3170 3159 1311]
+[ 895  986 2834 ... 2131 1739 2791]
+[ 834  955 2745 ... 2233 3060 1268]
+[2402  177  708 ... 2300 3123 3197]
+[1110  199 1376 ... 3049 2925 1291]
+[3146 2748 1998 ... 3048  876 2849]
+[ 836 2251 2968 ... 2442 1635 2600]
+[ 772  332  281 ... 2930 2164 2067]
+[1130   37 1262 ...  597 1554  384]
+[2013  306  230 ...  844 2332  964]
+[ 941 1187  879 ... 2331 2626  198]
+[ 955  361 1437 ... 2016 3073 1272]
+[2864 2821 1975 ... 2645 2432 2906]
+Traceback (most recent call last):
+  File "train.py", line 125, in <module>
+    validation_loader = val_dataset.getloader(batch_size=opts.batch_size, shuffle=True)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/building_numerical_dataset.py", line 18, in getloader
+    return DataLoader(self, batch_size = batch_size, shuffle = shuffle)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 213, in __init__
+    sampler = RandomSampler(dataset)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/sampler.py", line 94, in __init__
+    "value, but got num_samples={}".format(self.num_samples))
+ValueError: num_samples should be a positive integer value, but got num_samples=0
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[1922   68  944 ...  981  556 1892]
+[1601  342 1659 ...  444 1166 1944]
+[3143 1258 2523 ... 2833 2811 1372]
+[2292 2846  200 ... 1411 2437 2355]
+[1062  760   17 ...  479 1025 3129]
+[1726 2713 2860 ...  763  691 1794]
+[1924 1589 1625 ... 1585 1785 2044]
+[1887 1730    4 ... 2513   28  716]
+[2318 2493   92 ...  686 1286 2406]
+[ 940 2478 1002 ... 1928 2049  361]
+[2240  332 2279 ...  999  403 1626]
+[ 209 2411   40 ... 3144 3158  801]
+[2424  432  750 ... 2798  466 1881]
+[ 444   99 2475 ... 1892  509 2084]
+[2171  994 2934 ... 2599 2579 1525]
+[ 321 1918  767 ... 1365 1317  417]
+[2258 2702  970 ... 1456 1515 1938]
+[2339 3043 1837 ... 3131 2313 1120]
+[2417 1621 2210 ... 2142 1745 1660]
+[1575 1481  359 ... 2919 2272  450]
+[2008  270 1015 ...  849 1890 1603]
+[2697 2305 1399 ... 1290 1381 2875]
+[ 592 2526  166 ...  752    2  521]
+[2942  662  165 ...  406 2690 1552]
+[2127 2603 1545 ...  533 2058  430]
+[1132 1747 1388 ...   47 2660 1571]
+[1174   82  446 ...  201 2294  622]
+Traceback (most recent call last):
+  File "train.py", line 125, in <module>®
+    validation_loader = val_dataset.getloader(batch_size=opts.batch_size, shuffle=True)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/building_numerical_dataset.py", line 19, in getloader
+    return DataLoader(self, batch_size = batch_size, shuffle = shuffle)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 213, in __init__
+    sampler = RandomSampler(dataset)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/sampler.py", line 94, in __init__
+    "value, but got num_samples={}".format(self.num_samples))
+ValueError: num_samples should be a positive integer value, but got num_samples=0
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[2924  919   54 ...  247 2625  756]
+[1624 1231 2421 ... 2722  936 1443]
+[1255 2501 1598 ...  954  146 2614]
+[ 572 1185 1279 ...  600 2056 2281]
+[2402 2529  788 ... 2603 1089 2272]
+[1811 1147  341 ...  702 1233  929]
+[ 472 2933 3088 ...  171 1119  314]
+[2463  480  356 ... 1732  200  532]
+[1038  829  256 ... 1991  674 2178]
+[3140 3042 1601 ...  789 2414  492]
+[ 220  754  438 ... 1567 2718  514]
+[ 378 2375 2169 ... 2670 2233 2571]
+[2351  555  185 ... 1532 1708 1149]
+[2825 3131 2300 ...  163 1284 2876]
+[2923 2054  669 ... 2321 2122  531]
+[ 194 2355 3050 ... 1590 1895 1386]
+[2597 2572 1739 ... 1458  197 2630]
+[ 885  181 2230 ...  138 1232 2188]
+[3180 1604  804 ... 1159  360 2233]
+[1727 2707  516 ... 2799 1169 1610]
+[2749  108 2818 ...  565 1383 1685]
+[ 935 1348 2103 ...  492 2365 1261]
+[1921   31 1666 ...  840 2003 1664]
+[ 670  298 1751 ... 2506  928  682]
+[ 875 1209  504 ...  373  744 1516]
+[1071 2877 2332 ... 2460 1438 2193]
+[2880  793  445 ... 3162 2481 2023]
+Traceback (most recent call last):
+  File "train.py", line 125, in <module>
+    validation_loader = val_dataset.getloader(batch_size=opts.batch_size, shuffle=True)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/building_numerical_dataset.py", line 19, in getloader
+    return DataLoader(self, batch_size = batch_size, shuffle = shuffle)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 213, in __init__
+    sampler = RandomSampler(dataset)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/sampler.py", line 94, in __init__
+    "value, but got num_samples={}".format(self.num_samples))
+ValueError: num_samples should be a positive integer value, but got num_samples=0
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[1253 2400 2274 ...  829 2571 1402]
+[ 767 1127 2118 ... 2467 1772 3072]
+[2527 1392 1414 ...  334  357 2213]
+[2216 2758 2874 ... 2986 2183 2284]
+[2272  302 2081 ...  689   38 3098]
+[ 113 3125 1243 ...  938 1352 2035]
+[1447  315  982 ... 2776 1817 3090]
+[ 967   23  373 ... 2082  421 1597]
+[ 976 2326  379 ... 1045  746 1283]
+[2498  972 2513 ... 3131 2075 2641]
+[1574 3128   88 ... 1323 2990 1448]
+[1659 1086 2079 ...  950 2115 2296]
+[1578  193 1815 ... 1367 2535 2659]
+[2020 1155 1766 ... 1154 2314 1642]
+[  49 2426  528 ...  389  961 1320]
+[2658  453  155 ... 3045 2873  715]
+[ 116 3186 1295 ... 2210 2643 1248]
+[2541 1041 2723 ... 2632  413 2371]
+[ 293 1406 1721 ... 1176 1922 1794]
+[2307 2498  716 ... 2347  611 1542]
+[1502 2602  101 ... 1072 2753 2889]
+[2389  943 1762 ... 2446 2142 3143]
+[  19 1619 2207 ... 1473 2774 2868]
+[ 194 2935 1665 ...   78 2263  988]
+[2191 2000    7 ... 1335 2101  808]
+[1669  988 2647 ... 1421 2147 2195]
+[3083 1821 1042 ... 2204 1825 2700]
+[2035  466  963 ... 1539 2669 3196]
+[ 340  531 2794 ...  623 2833 1744]
+[2992 2889 2033 ... 2116 2925  486]
+[ 345 2456 3054 ... 2883  500 2265]
+[ 698 2227 2756 ... 3083 2340  513]
+[ 464 2286 2763 ...  653 2986  822]
+[2111 2433  535 ...  341 1513 2815]
+[ 887 2275  492 ... 2995 1283 1154]
+[2981 2589 2070 ...   79 2286 1513]
+wrapper: tensor([1213,  347, 2558,  ..., 3120, 1771,  997])
+game size: 2
+shape of tensor  torch.Size([])
+Tensor: tensor(1213)
+Traceback (most recent call last):
+  File "train.py", line 152, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 153, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 133, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 113, in forward
+    message, sender_log_prob, sender_entropy = self.sender(sender_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 42, in forward
+    logits = self.agent(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 31, in forward
+    emb = self.return_embeddings(x)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 65, in return_embeddings
+    h_i = self.lin1(h)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 87, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/functional.py", line 1371, in linear
+    output = input.matmul(weight.t())
+RuntimeError: both arguments to matmul need to be at least 1D, but they are 0D and 2D
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[2549 2933 3145 ... 1886   59 2928]
+[ 432 1434  637 ... 1791 2592  347]
+[   9 2840 2915 ... 1372 2318 1187]
+[2767 1826 1351 ...  703 2884  128]
+[ 652 2733 1765 ...  293 2602  284]
+[1432 1449  349 ...  897 2735 1038]
+[3035   90 2494 ...   39 1623  727]
+[2481 1596 1842 ...  443  167 2363]
+[1861 2028 3065 ... 2338  253   99]
+[1399 2529 1200 ...  859 1122  955]
+[2367  895 1360 ... 1865 2647 2372]
+[2152 1538 1192 ... 1062  991 1857]
+[2834  577 2404 ...  933 3043 2082]
+[2454 3190 1572 ... 1809 2726 2739]
+[ 178  339 2061 ... 2178 3159 1911]
+[1870 3072   95 ... 2166 1353 1488]
+[1988  516  503 ... 2224  659  312]
+[1557 3128  216 ... 2797 1258 2529]
+[1203 1748 1044 ...  539 1987 1292]
+[2448 2099 1058 ... 2104 2906 1404]
+[1566 2649  897 ... 2058 2194  395]
+[1097 2790 2267 ... 1928 2683 1965]
+[1189 1439 2612 ... 1955  363  758]
+[3137 2338  524 ... 1848  414  159]
+[1626 3183 2367 ...  488  764 1258]
+[2612 2267  968 ...  824 1493 2980]
+[ 806 2999 2870 ... 2058 1127  652]
+[2080 1927 1986 ...  761  456  228]
+[2756  402 1759 ... 1137 2677 2159]
+[1478 2187  735 ... 1674 1408 1716]
+[ 936 1983 2296 ...   77 1601 2860]
+[2624  391 2569 ... 2664   97 2213]
+[ 363 1177 1786 ... 1847  131 2043]
+[2980  431 3051 ... 3022  573 3007]
+[2998 3171  630 ... 2014  956  128]
+[ 806 1786 3159 ... 2108    4 1131]
+Traceback (most recent call last):
+  File "train.py", line 152, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 154, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 130, in train_epoch
+    print("train data: " + type(self.train_data))
+TypeError: can only concatenate str (not "type") to str
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[3118 1771 1588 ... 3091 2569 1037]
+[ 548 2571 3024 ...   37  411 2632]
+[1542 2175   68 ...   69 2146 2308]
+[2026  511 1940 ...  733  641  776]
+[  18  612 3032 ... 2166 2871 1346]
+[ 513 2475 1819 ... 2871 1098  596]
+[1109  593 2952 ... 1086 2784 2934]
+[1498 1909 2285 ... 1810 1433  580]
+[ 352 2036  422 ... 2859  201 1609]
+[ 166 1328  700 ... 3178  610 3195]
+[ 863  331 2292 ... 2118 3059 2544]
+[ 987 1554  658 ... 2363 2023 2112]
+[2314  743   55 ... 1218 3098 2742]
+[   3 1240  803 ... 1200  827  858]
+[1099 1514 1379 ... 2817 1243 2339]
+[1944 2252 1440 ... 2692 2090 2821]
+[2954 2777 1560 ... 1820 2950 1427]
+[1695  307 2411 ... 1918   66  652]
+[ 584 2051  142 ... 1324 1053  733]
+[1955  112 1277 ...  897  598 2252]
+[ 338  231 2878 ... 2868 2441 3145]
+[ 972 3126 2353 ...  404  351 3065]
+[2737 1925  129 ...  625 1357 1243]
+[2843 1395  142 ... 1453 2266 2011]
+[2538 3074   99 ... 1338  676  522]
+[ 351 2517 1572 ... 1278 1573 1619]
+[2173 1941 1128 ... 2697  890 1766]
+[1815 2939 3030 ... 1718  137 1981]
+[1497 2426 1972 ... 1755 3163  190]
+[ 209 2822  772 ... 2043 2757 2964]
+[ 313 1972  310 ... 2157 1907 1716]
+[ 382  139 2363 ... 1443 2340 1756]
+[ 371 2736 1586 ... 3151 2956 2289]
+[2754 1577  447 ... 1619  859  562]
+[2276  826  209 ... 2667 1373 2528]
+[2163 1151 2515 ... 1504 2671 1011]
+train data: <class 'torch.utils.data.dataloader.DataLoader'>
+wrapper: tensor([1158,   22, 2953,  ..., 1940, 1567,  379])
+game size: 2
+shape of tensor  torch.Size([])
+Tensor: tensor(1158)
+Traceback (most recent call last):
+  File "train.py", line 152, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 154, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 134, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 113, in forward
+    message, sender_log_prob, sender_entropy = self.sender(sender_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 42, in forward
+    logits = self.agent(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 31, in forward
+    emb = self.return_embeddings(x)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 65, in return_embeddings
+    h_i = self.lin1(h)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 87, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/functional.py", line 1371, in linear
+    output = input.matmul(weight.t())
+RuntimeError: both arguments to matmul need to be at least 1D, but they are 0D and 2D
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[1496  302 1485 ... 2229 1319  584]
+[1114 3105 1505 ... 1088  193  809]
+[1490  918  738 ... 1192   27 2257]
+[ 333  304  723 ... 2030 1264 1963]
+[2836 3032 2576 ... 1307 3059 1905]
+[ 151  752 2696 ...  596 2770  285]
+[2742 1032 2787 ... 1118 1745 2029]
+[ 207 1107 2624 ... 1941  722 1010]
+[1018 2325  813 ... 3029 1134  423]
+[2237 1477  790 ... 1015 1005 2831]
+[1744 2922  174 ... 2706 3070 2308]
+[2001 2147 2113 ... 1871  294 2388]
+[ 886 2327 1499 ... 2272 1374  588]
+[2506 1025 2309 ...  545 1066  328]
+[ 828  774 2480 ... 2134 1075 1016]
+[1345 2041  887 ... 1562 2800 2477]
+[ 379 2973  160 ... 2240 1866 2936]
+[ 795 1223 2881 ... 2922 3166  467]
+[3038 2298 2768 ... 2474  171 1529]
+[2199 1004  686 ... 2505  817  175]
+[ 643 1904 1727 ... 2454 1970 1157]
+[2385 1160  983 ...    4  361 2552]
+[2829 1207 2734 ... 2427 1221  697]
+[2835 2300  782 ... 1709 1029  394]
+[1102 1838 2172 ... 1166 2266  750]
+[2167 1674   63 ... 2524   91  690]
+[  37  731 1594 ... 2758  452  338]
+[3072  608 1555 ... 2533 3023  330]
+[2396 1488  526 ... 2516  168 1422]
+[ 236 3027  307 ...  910   63 1143]
+[ 776 2465  155 ...  125 2269  515]
+[ 737 1216 2064 ...  337 2666 1331]
+[1911 1800  405 ... 1547 3127  587]
+[1743 1769 1738 ... 2806  753 1094]
+[ 586  395 1898 ... 2881 1776 1196]
+[1606 1769 1151 ... 2059 1147 1620]
+train data: <class 'torch.utils.data.dataloader.DataLoader'>
+batch: <class 'torch.Tensor'>
+wrapper: tensor([ 541, 1978,  343,  ...,  344, 2157, 1909])
+game size: 2
+shape of tensor  torch.Size([])
+Tensor: tensor(541)
+Traceback (most recent call last):
+  File "train.py", line 152, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 155, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 135, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 113, in forward
+    message, sender_log_prob, sender_entropy = self.sender(sender_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 42, in forward
+    logits = self.agent(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 31, in forward
+    emb = self.return_embeddings(x)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 65, in return_embeddings
+    h_i = self.lin1(h)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 87, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/functional.py", line 1371, in linear
+    output = input.matmul(weight.t())
+RuntimeError: both arguments to matmul need to be at least 1D, but they are 0D and 2D
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[1494 2171  461 ... 1466  460  434]
+[2948 2074  903 ... 2279  380 1742]
+[1371 1091 1086 ... 1891  726  707]
+[ 648 2892  186 ... 2743  733  345]
+[ 327 3106 1063 ... 3094 2612 2738]
+[1732 3095 1805 ... 2525  723 3041]
+[ 608  752  435 ...  251  486 2601]
+[  31  993 2366 ... 1535  463  364]
+[ 594 1773 2709 ... 2617 2792 1698]
+[ 475 1134 2161 ... 2231 1493  820]
+[ 655 1313 2442 ... 3098 1318 1570]
+[2319 1617 3019 ...  798  542 1371]
+[2614 2479 2552 ...   30  637 1871]
+[2035 2205 2355 ... 2181 3126 1643]
+[2173 2756 2878 ... 1319 2228   62]
+[1793  440 1346 ... 2772 2299 2334]
+[ 355  393   34 ... 1875 2589 2268]
+[1602 1681 2289 ...  470  578 1518]
+[2183 1943  601 ...  801 3115 2383]
+[1753 3054 1618 ... 2640 2096 1340]
+[ 507 1657   24 ...  494 2606  932]
+[2093   66  878 ... 2023 2790 3191]
+[1852  218 1749 ... 1625 3166  203]
+[ 737 1879 2580 ... 2794  854 2499]
+[2293 1420 2454 ... 1117   55   57]
+[2687 1969    0 ...  903 2757 1579]
+[2454 2735  730 ...  189 2142 1753]
+[1320  275 2395 ...  870  546 1801]
+[ 917  464  229 ... 3039 1101 1419]
+[  87 2233 2472 ... 1575 3020  920]
+[2712 1495  930 ... 1969  974 1497]
+[1308 2616  119 ... 2778 2177  177]
+[2522 3123  148 ...  641 2295 2135]
+[1244 2004 1343 ...  882 2708  688]
+[1002 2900  211 ... 2404 2374 1852]
+[1654 3137  330 ...  383 2235  452]
+
+
+
+
+----------------train
+train data: <class 'torch.utils.data.dataloader.DataLoader'>
+batch: <class 'torch.Tensor'>
+batch:  dimtorch.Size([3, 9600])
+wrapper: tensor([1263, 1240, 2862,  ..., 2890, 3169, 2042])
+game size: 2
+shape of tensor  torch.Size([])
+Tensor: tensor(1263)
+Traceback (most recent call last):
+  File "train.py", line 152, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 157, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 137, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 113, in forward
+    message, sender_log_prob, sender_entropy = self.sender(sender_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 42, in forward
+    logits = self.agent(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 31, in forward
+    emb = self.return_embeddings(x)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 65, in return_embeddings
+    h_i = self.lin1(h)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 87, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/functional.py", line 1371, in linear
+    output = input.matmul(weight.t())
+RuntimeError: both arguments to matmul need to be at least 1D, but they are 0D and 2D
+➜  signal_game git:(master) ✗ python3 train.py --root=/Users/pengfeihe/Documents/Programming\ Language/Python/data
+
+[2728 1547 1477 ...  438  156  281]
+[2837 1866  751 ... 1351  443   24]
+[1552 2510  712 ... 1185 2997  246]
+[1324  911 1330 ... 2368 1140  673]
+[2890 2191 1625 ... 1534 1009 2261]
+[1652 2429  319 ... 2729 3182 2445]
+[ 897   14 1834 ... 1716 1617  332]
+[1761 1010 1302 ... 2570 1847 1982]
+[ 187 1858 1234 ... 2893 2512 1693]
+[1588  926 2124 ... 1725  338 3116]
+[1064  633   35 ...  971 1951  141]
+[ 648  936 1499 ... 1268 3061 3076]
+[1378 2495  698 ...   16   58  453]
+[2096 1235 1970 ... 1212  767 1361]
+[2811 1452 2194 ... 1642 2329 2885]
+[2136  272 1335 ... 2388 2649 1932]
+[2779 2246  654 ... 1536 1654  661]
+[2108 2026 2676 ... 3169  539  308]
+[2001  942 1579 ... 3022 2876 1166]
+[1286 2228 3103 ...  811 1143  697]
+[1994 2151 1808 ... 3077 1444    0]
+[1224 3031 2123 ... 1109 1250 2873]
+[1792 1558 2139 ... 2598   56 2860]
+[1474   95 2180 ...  286 2192  976]
+[2610 2315 2925 ... 1202  693  700]
+[ 569  110 1297 ... 2761  844 1155]
+[2978 2312 1590 ...  180  341 3025]
+[2824 1427 2250 ... 2228 2433 2633]
+[2217  624   31 ...  419 2959 2809]
+[ 303   92 1621 ...  818 2741 1202]
+[2527 2507 1008 ... 1371 1928 2477]
+[ 530 1127 1851 ... 2350 1952 1554]
+[2732  855 1294 ...  310 3085 1287]
+[1427  853  993 ... 1237 1274 2922]
+[1328  457 3091 ... 2659 2638 1079]
+[1831  665 2421 ... 1740  806 2230]
+
+
+
+
+----------------train
+train data: <class 'torch.utils.data.dataloader.DataLoader'>
+batch: <class 'torch.Tensor'>
+batch:  dimtorch.Size([2, 9600])
+wrapper: tensor([1156, 2271, 2825,  ..., 1441,  288, 1776])
+game size: 2
+shape of tensor  torch.Size([])
+Tensor: tensor(1156)
+Traceback (most recent call last):
+  File "train.py", line 152, in <module>
+    trainer.train(n_epochs=opts.n_epochs)  # default is 10
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 157, in train
+    train_loss, train_rest = self.train_epoch()
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/trainers.py", line 137, in train_epoch
+    optimized_loss, rest = self.game(*batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 113, in forward
+    message, sender_log_prob, sender_entropy = self.sender(sender_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/core/reinforce_wrappers.py", line 42, in forward
+    logits = self.agent(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 31, in forward
+    emb = self.return_embeddings(x)
+  File "/Users/pengfeihe/Documents/Programming Language/Python/Github/EGG/egg/zoo/signal_game/archs.py", line 65, in return_embeddings
+    h_i = self.lin1(h)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 87, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/functional.py", line 1371, in linear
+    output = input.matmul(weight.t())
+RuntimeError: both arguments to matmul need to be at least 1D, but they are 0D and 2D
+➜  signal_game git:(master) 
