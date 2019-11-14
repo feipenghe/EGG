@@ -61,7 +61,7 @@ class _OneHotIterator:
                 dimension = np.random.choice(self.n_properties,
                                              self.n_properties, replace=False)
 
-                print(dimension)
+                # print(dimension)
 
                 # put min value in 0, 2, 4 at the current dimension?
                 # the index of min properties

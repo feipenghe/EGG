@@ -19,7 +19,7 @@ def get_params():
     parser.add_argument('--n_properties', type=int, default=10,
                         help='Dimensionality of the "concept" space (default: 10)')
     parser.add_argument('--n_dim', type=int, default=3,
-                        help='Dimensionality of the "concept" space (default: 10)')n
+                        help='Dimensionality of the "concept" space (default: 10)')
     parser.add_argument('--batches_per_epoch', type=int, default=1000,
                         help='Number of batches per epoch (default: 1000)')
 
