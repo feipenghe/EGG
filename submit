@@ -4,7 +4,6 @@ output     = ../tmp/signal_game.out
 error      = ../tmp/signal_game.error
 log        = ../tmp/signal_game.log
 notification = complete
-arguments  = "-a -n"
 transfer_executable = false
 request_memory = 2*1024
 research = True
