@@ -29,13 +29,13 @@ class _OneHotIterator:
     tensor([1., 1., 1., 1.])
     """
 
-    def __init__(self, n_dim,  n_properties,  n_batches_per_epoch, batch_size, seed=None):
+    def __init__(self, n_dim,  n_objects,  n_batches_per_epoch, batch_size, seed=None):
         self.n_batches_per_epoch = n_batches_per_epoch
         # self.n_features = n_features
         self.batch_size = batch_size
         self.n_dim = n_dim
-        self.n_properties =  n_properties
-        n_features = n_dim * n_properties
+        self.n_objects =  n_objects
+        n_features = n_dim * n_objects
         self.probs = np.ones(n_features) / n_features
         self.batches_generated = 0
         self.random_state = np.random.RandomState(seed)
@@ -58,8 +58,8 @@ class _OneHotIterator:
 
             for idx in range(self.n_dim):
                 # pick properties from scale(set) of values
-                dimension = np.random.choice(self.n_properties,
-                                             self.n_properties, replace=False)
+                dimension = np.random.choice(self.n_objects,
+                                             self.n_objects, replace=False)
 
                 # print(dimension)
 
@@ -107,11 +107,11 @@ class OneHotLoader(torch.utils.data.DataLoader):
     0
     """
 
-    def __init__(self, n_dim , n_properties, batches_per_epoch, batch_size, seed=None):
+    def __init__(self, n_dim , n_objects, batches_per_epoch, batch_size, seed=None):
         self.seed = seed
         self.batches_per_epoch = batches_per_epoch
         self.n_dim = n_dim
-        self.n_properties = n_properties
+        self.n_objects = n_objects
         # self.n_features = n_dim * n_properties
         self.batch_size = batch_size
 
@@ -120,7 +120,7 @@ class OneHotLoader(torch.utils.data.DataLoader):
             seed = np.random.randint(0, 2 ** 32)
         else:
             seed = self.seed
-        return _OneHotIterator(n_dim=self.n_dim, n_properties= self.n_properties, n_batches_per_epoch=self.batches_per_epoch,
+        return _OneHotIterator(n_dim=self.n_dim, n_objects= self.n_objects, n_batches_per_epoch=self.batches_per_epoch,
                                batch_size=self.batch_size, seed=seed)
         # return _OneHotIterator(n_features=self.n_features, n_batches_per_epoch=self.batches_per_epoch,
         #                        batch_size=self.batch_size, seed=seed)
