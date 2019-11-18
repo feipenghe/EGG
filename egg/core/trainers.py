@@ -59,6 +59,7 @@ class Trainer:
         self.train_data = train_data
         self.validation_data = validation_data
         common_opts = get_opts()
+        print(common_opts)
         self.validation_freq = common_opts.validation_freq
         self.device = common_opts.device if device is None else device
         self.game.to(self.device)
