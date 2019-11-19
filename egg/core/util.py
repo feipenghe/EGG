@@ -194,8 +194,11 @@ def dump_sender_receiver(game: torch.nn.Module,
         for batch in dataset:
             # by agreement, each batch is (sender_input, labels) plus optional (receiver_input)
             sender_input = move_to(batch[0], device)
+            print("sender_input: " + str(sender_input))
+            print("batch" + str(batch))
+            print("batch length" + str(len(batch)))
             receiver_input = None if len(batch) == 2 else move_to(batch[2], device)
-
+            print("receiver_input: " + str(receiver_input))
             message = game.sender(sender_input)
 
             # Under GS, the only output is a message; under Reinforce, two additional tensors are returned.

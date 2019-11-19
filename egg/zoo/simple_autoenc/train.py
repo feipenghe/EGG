@@ -116,6 +116,8 @@ if __name__ == "__main__":
     trainer = core.Trainer(game=game, optimizer=optimizer, train_data=train_loader,
                            validation_data=test_loader,
                            callbacks=callbacks + [core.ConsoleLogger(as_json=True)])
+
+    # sender_input, messages, _receiver_inputs, receiver_outputs, _labels = core.dump_sender_receiver(game, train_loader, gs=False, variable_length=False)
     trainer.train(n_epochs=opts.n_epochs)
 
     core.close()

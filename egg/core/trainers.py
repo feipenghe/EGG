@@ -6,6 +6,7 @@
 import os
 import uuid
 import pathlib
+import egg.core as core
 from typing import List, Optional
 
 import torch
@@ -60,6 +61,10 @@ class Trainer:
         self.validation_data = validation_data
         common_opts = get_opts()
         print(common_opts)
+
+
+
+
         self.validation_freq = common_opts.validation_freq
         self.device = common_opts.device if device is None else device
         self.game.to(self.device)

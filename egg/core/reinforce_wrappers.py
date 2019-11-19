@@ -300,6 +300,7 @@ class RnnReceiverDeterministic(nn.Module):
         self.encoder = RnnEncoder(vocab_size, embed_dim, hidden_size, cell, num_layers)
 
     def forward(self, message, input=None, lengths=None):
+
         encoded = self.encoder(message)
         agent_output = self.agent(encoded, input)
 
