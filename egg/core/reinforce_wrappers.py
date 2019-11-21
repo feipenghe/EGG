@@ -300,8 +300,9 @@ class RnnReceiverDeterministic(nn.Module):
         self.encoder = RnnEncoder(vocab_size, embed_dim, hidden_size, cell, num_layers)
 
     def forward(self, message, input=None, lengths=None):
-
+        print("receiver foward: " + str(message))
         encoded = self.encoder(message)
+        print("encoded message: " + str(encoded))
         agent_output = self.agent(encoded, input)
 
         logits = torch.zeros(agent_output.size(0)).to(agent_output.device)
